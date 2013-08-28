@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" style="overflow:hidden;">
+<html lang="en" id="homepage">
 <head>
 	<title>Campaign Website</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="dist/css/styles.css">
 
 </head>
-<body style="overflow:hidden;">
+<body>
 
 	<header>
 
@@ -32,7 +32,7 @@
 			<strong>Feed:</strong> Lorem ipsum something else and more words for you...
 		</div>
 
-		<nav class="left-nav">
+		<nav class="left-nav hidden-xs">
 
 			<ul class="nav nav-stacked">
 				<li><a href="">HOME</a></li>
@@ -49,24 +49,70 @@
 
 	</header>
 
-	<div id="bg-picture" class="row">
+	<div id="bg-picture">
 
 		<div class="only-nau hidden-xs">
 			<h1>only at NAU</h1>
 		</div>
 
+	</div>
+
+	<footer>
+
 		<div class="stories">
+			
 			<div class="stories-btn">
-				<button type="button" class="btn btn-default">stories</button>
+				<button type="button" class="btn btn-default" data-toggle="collapse" data-target=".stories-collapse">student life</button>
+			</div>
+			
+			<div style="padding:5px; background-color:#fff; width:100%"></div>
+
+			<section class="stories-collapse collapse">
+				<div style="padding:5px; background-color:#fff; width:100%"></div>
+				<div class="four-column-content row">
+
+
+
+				<div class="col-xs-6 col-sm-3">
+					<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
+					<h4 class="short-article-title">Lorem Ipsum something else</h4>
+					<p>
+						Sub content for each article that will be a small description, or excerpt, before the user clicks into the full article.
+					</p>
+				</div>
+
+				<div class="col-xs-6 col-sm-3">
+					<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
+					<h4 class="short-article-title">Lorem Ipsum something else</h4>
+					<p>
+						Sub content for each article that will be a small description, or excerpt, before the user clicks into the full article.
+					</p>
+				</div>
+
+				<div class="col-xs-6 col-sm-3">
+					<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
+					<h4 class="short-article-title">Lorem Ipsum something else</h4>
+					<p>
+						Sub content for each article that will be a small description, or excerpt, before the user clicks into the full article.
+					</p>
+				</div>
+
+				<div class="col-xs-6 col-sm-3">
+					<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
+					<h4 class="short-article-title">Lorem Ipsum something else</h4>
+					<p>
+						Sub content for each article that will be a small description, or excerpt, before the user clicks into the full article.
+					</p>
+				</div>
+
 			</div>
 			<div style="padding:5px; background-color:#fff; width:100%"></div>
+			</section>
 
 		</div>
 
 
-
-	</div>
-
+	</footer>
 
 </body>
 	<script type="text/javascript" src="assets/js/jquery.js"></script>

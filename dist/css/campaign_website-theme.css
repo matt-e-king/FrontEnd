@@ -7,6 +7,14 @@
   font-family: Univers;
 }
 
+.five-column-content .col-sm-2 {
+  width: 20%;
+}
+
+.five-column-content .col-xs-12 {
+  width: 100%;
+}
+
 .btn-primary {
   background-color: #003466;
   border: none;
