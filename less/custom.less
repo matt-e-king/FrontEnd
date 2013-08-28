@@ -14,6 +14,15 @@ body,html {
 	background-color:@gray-lighter;
 }
 
+#homepage {
+	overflow:hidden;
+}
+
+.inner-page {
+	position:relative;
+	bottom:0px;
+}
+
 hr.green {
 	background-color:@nau-light-sage;
 	color:@nau-light-sage;
@@ -118,8 +127,13 @@ h3 {
 
 }
 
-.stories-inner {
+.stories-collapse {
+	background-color:#fff;
 
+	.row {
+		margin-left:0px;
+		margin-right:0px;
+	}
 }
 
 .nau-video {
@@ -167,6 +181,7 @@ h3 {
 }
 
 @media (min-width: @screen-md) {
+
 	.only-nau {
 
 		h1 {
@@ -177,6 +192,7 @@ h3 {
 
 
 @media (min-width: @screen-lg) {
+
 	.only-nau {
 
 		h1 {

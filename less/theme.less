@@ -31,6 +31,11 @@ src: url('../fonts/univers.ttf');
   border-radius:0px;
 }
 
+.five-column-content {
+  .col-sm-2  { width: percentage((2.4 / @grid-columns)); }
+  .col-xs-12  { width: 100%; }
+}
+
 .btn-primary { .btn-colors(@nau-blue); .remove-rounded() }
 
 .breadcrumb {
