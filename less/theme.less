@@ -1,0 +1,63 @@
+
+//
+// Load core variables and mixins
+// --------------------------------------------------
+
+@import "variables.less";
+@import "mixins.less";
+
+@nau-blue: #003466;
+@nau-sage: #557665;
+@nau-light-sage: #619080;
+@nav-link-hover-bg: @nau-blue;
+@dark-grey: #595959;
+
+@font-face
+{
+font-family: Univers;
+src: url('../fonts/univers.ttf');
+}
+
+.univers-font {
+  font-family: Univers;
+}
+
+.btn-colors(@btn-color: #555;) {
+  background-color: @btn-color;
+  border:none;
+}
+
+.remove-rounded() {
+  border-radius:0px;
+}
+
+.btn-primary { .btn-colors(@nau-blue); .remove-rounded() }
+
+.breadcrumb {
+  font-size:12px;
+  padding: 0px 0px;
+  margin-bottom: @line-height-computed;
+  list-style: none;
+  background-color: transparent;
+  border-radius: 0px;
+  > li {
+    display: inline-block;
+    &+li:before {
+      content: "|\00a0"; // Unicode space added since inline-block means non-collapsing white-space
+      padding: 0 5px;
+      color: @breadcrumb-color;
+    }
+    a {
+      color:@nau-light-sage;
+      &:hover {
+        text-decoration:none;
+        color:@nau-light-sage;
+      }
+    }
+  }
+  > .active {
+    color: @breadcrumb-active-color;
+  }
+}
+
+

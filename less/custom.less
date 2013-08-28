@@ -1,0 +1,190 @@
+
+//
+// Load core variables and mixins
+// --------------------------------------------------
+
+@import "theme.less";
+
+
+header .well-sm { .remove-rounded; margin-bottom:0px; background-color:#fff;}
+
+body,html {
+	height:100%;
+	color:@dark-grey;
+	background-color:@gray-lighter;
+}
+
+hr.green {
+	background-color:@nau-light-sage;
+	color:@nau-light-sage;
+}
+
+hr.lg {
+	height:7px;
+}
+
+hr.sm {
+	height:3px;
+}
+
+h3 {
+	color:@nau-light-sage;
+}
+
+#bg-picture {
+	background-image:url('../../assets/img/old_main.jpg');
+	background-repeat:no-repeat;
+	background-position: top center;
+	padding-left:0px;
+	padding-right:0px;
+	height:100%;
+	background-size:cover;
+	overflow:hidden; 
+}
+
+#body-content {
+	margin-top:50px;
+	margin-bottom:50px;
+}
+
+#article-bg-picture {
+	max-height:500px;
+	overflow:hidden;
+}
+
+#bg-picture.row, #article-bg-picture.row {
+	margin-right:0px;
+	margin-left:0px;
+}
+
+.overview {
+	font-style: italic;
+}
+
+.only-nau {
+
+	position:absolute;
+	right:8%;
+	top:8%;
+
+	h1 {
+		font-size:100px;
+		color:#fff;
+		letter-spacing: -8px;
+		.univers-font;
+		text-shadow: 1px 1px 10px #999999;
+	}
+}
+
+.menu-btn {
+	width:100%;
+	height:70px;
+	font-size:34px;
+	letter-spacing:-3;
+	.univers-font;
+}
+
+.related-bar {
+	h3 {
+		margin:5px;
+	}
+
+	hr {
+		margin:5px;
+	}
+	img {
+		padding:5px;
+	}
+}
+
+.stories-btn {
+	position:relative;
+	width:150px;
+	margin:0px auto;
+	button {
+		height:50px;
+		width:100%;
+		font-size:16px;
+		.remove-rounded;
+		.btn-colors(#fff);
+	}
+} 
+
+.stories {
+
+	position:absolute;
+	bottom:0px;
+	width:100%;
+
+}
+
+.stories-inner {
+
+}
+
+.nau-video {
+	margin-bottom:15px;
+}
+
+.left-nav {
+	position:fixed;
+	width:300px;
+	height:100%;
+	background-color:@nau-blue;
+
+	ul {
+		margin-left:20px;
+
+		> li {
+			> a {
+				color:#fff;
+				&:hover,
+      			&:focus {
+	       			text-decoration: none;
+	        		background-color: @nav-link-hover-bg;
+     			}
+			}
+		}
+	}
+
+}
+
+.article-title {
+
+}
+
+
+@media (min-width: @screen-sm) {
+
+	.menu-btn {
+		width:200px;
+		height:50px;
+		font-size:16px;
+		letter-spacing:0px;
+		font-family:'Arial';
+	}
+
+}
+
+@media (min-width: @screen-md) {
+	.only-nau {
+
+		h1 {
+			font-size:130px;
+		}
+	}
+}
+
+
+@media (min-width: @screen-lg) {
+	.only-nau {
+
+		h1 {
+			font-size:170px;
+
+		}
+	}
+}
+
+
+
