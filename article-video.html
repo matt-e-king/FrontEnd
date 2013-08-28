@@ -4,6 +4,7 @@
 	<title>Campaign Website</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="dist/css/styles.css">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
 </head>
 <body>
@@ -28,7 +29,7 @@
 
 		</button>
 
-		<div id="feed-bar" class="well well-sm hidden-xs" style="margin-left:200px; height:50px; padding-top:15px;">
+		<div class="feed-bar well well-sm hidden-xs">
 			<strong>Feed:</strong> Lorem ipsum something else and more words for you...
 		</div>
 
@@ -49,7 +50,7 @@
 
 	</header>
 
-	<div id="article-bg-picture" class="row">
+	<div id="article-bg-picture">
 		<img src="assets/img/article-video.jpg" alt="" class="img-responsive"/>
 	</div>
 		<div class="only-nau hidden-xs">
@@ -66,9 +67,15 @@
 
 
 	<section id="body-content" class="container">
-
+		<div class="social">
+			<i class="icon-twitter"></i>
+			<i class="icon-facebook"></i>
+			<i class="icon-google-plus"></i>
+			<i class="icon-youtube-play"></i>
+		</div>
 		<ol class="breadcrumb">
-			<li><a href="#">SUSTAINABILITY</a></li>
+			<li><a href="#">CATEGORIES</a></li>
+			<li><a href="category.html">SUSTAINABILITY</a></li>
 			<li CLASS="active">ARTICLE</li>
 		</ol>
 
@@ -88,7 +95,7 @@
 
 			<div class="two-col-content row">
 
-				<div class="col-xs-12 col-md-9">
+				<div class="content col-xs-12 col-md-9">
 					<div class="nau-video">
 						<iframe src="//player.vimeo.com/video/11392027" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 					</div>
@@ -101,8 +108,16 @@
 
 					<hr class="green lg" />
 
-					<div class="cta">
-						<h3><span class="glyphicon glyphicon-play-circle"></span> CTA Goes here</h3>
+					<div class="cta well well-lg">
+						<h3>
+
+							<a href="#">
+							<span class="glyphicon glyphicon-play-circle"></span>
+							CTA Goes Here
+							<span class="badge pull-right">Learn More</span>
+							</a>
+
+						</h3>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisis mi a neque pretium, a posuere sapien convallis. Ut sed commodo mi. Nullam posuere urna mauris, sed vestibulum tortor tincidunt quis. Praesent molestie massa quis ullamcorper auctor.							
 						</p>
@@ -137,9 +152,10 @@
 			
 			<div class="stories-btn">
 				<button type="button" class="btn btn-default" data-toggle="collapse" data-target=".stories-collapse">student life</button>
+				<div style="padding:5px; background-color:#fff; width:100%; z-index:1000; position:absolute; bottom:-10px"></div>
 			</div>
 			
-			<div style="padding:5px; background-color:#fff; width:100%"></div>
+			<div class="white-bar"></div>
 
 			<section class="stories-collapse collapse">
 				<div style="padding:5px; background-color:#fff; width:100%"></div>
