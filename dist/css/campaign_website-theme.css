@@ -36,6 +36,12 @@
   border-radius: 0;
 }
 
+.btn-primary:hover {
+  background-color: #003466;
+  border: none;
+  opacity: 0.7;
+}
+
 .breadcrumb {
   padding: 0 0px;
   margin-top: 14px;
