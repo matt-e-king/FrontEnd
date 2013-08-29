@@ -6,13 +6,14 @@
 @import "theme.less";
 
 
-header {
+header:not(.left-side-page) {
 	.shadow(@horizontal: 0px; @vertical: 6px; @spread: -5px; @color: #555;);
 	height:50px;
 	z-index:1000;
 	position:relative;
 
 }
+
 
 .well-sm, .well-lg {
 	.remove-rounded;
@@ -122,7 +123,7 @@ h3 {
 		color:#fff;
 		letter-spacing: -8px;
 		.univers-font;
-		text-shadow: 1px 1px 10px #999999;
+		text-shadow: 1px 1px 10px #333;
 	}
 }
 
@@ -172,7 +173,10 @@ h3 {
 		font-size:16px;
 		.remove-rounded;
 		.btn-colors(#fff);
-	}
+		&:hover,active {
+			.btn-colors(#fff);
+			}
+		}
 } 
 
 .white-bar {
@@ -225,6 +229,7 @@ h3 {
 	}
 
 }
+
 
 .article-title, .category-title {
 	margin-top:5px;

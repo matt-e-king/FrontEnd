@@ -1,0 +1,155 @@
+
+//
+// Load core variables and mixins
+// --------------------------------------------------
+
+@import "variables.less";
+@import "mixins.less";
+
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+
+@nau-blue: #003466;
+@nau-dark-blue: #0c2842;
+@nau-darker-blue: #061626;
+@nau-light-blue: #6699cc;
+@nau-sage: #557665;
+@nau-light-sage: #619080;
+@nav-link-hover-bg: @nau-blue;
+@dark-grey: #595959;
+@font-size-base: 16px;
+@label-primary-bg: @nau-blue;
+@badge-border-radius:0px;
+
+@font-face
+{
+font-family: Univers;
+src: url('../fonts/univers.ttf');
+}
+
+@font-face
+{
+font-family: Egyptian;
+src: url('../fonts/egyptian.otf');
+}
+
+.shadow(@horizontal: 0px; @vertical: 6px; @spread: -5px; @color: #999;) {
+  -moz-box-shadow:    @horizontal @vertical 5px @spread @color;
+  -webkit-box-shadow: @horizontal @vertical 5px @spread @color;
+  box-shadow:         @horizontal @vertical 5px @spread @color;
+}
+
+.univers-font {
+  font-family: Univers;
+}
+
+.egyptian-font {
+  font-family: Egyptian;
+}
+
+.roboto-font {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.btn-colors(@btn-color: #555;) {
+  background-color: @btn-color;
+  border:none;
+}
+
+.remove-rounded() {
+  border-radius:0px;
+}
+
+.five-column-content {
+  .col-sm-2  { width: percentage((2.4 / @grid-columns)); }
+  .col-xs-12  { width: 100%; }
+}
+
+.btn-primary { 
+  .btn-colors(@nau-dark-blue);
+  .remove-rounded();
+  &:hover {
+    .btn-colors(@nau-dark-blue);
+    opacity:0.7;
+  }
+}
+
+.breadcrumb {
+  font-size:12px;
+  padding: 0px 0px;
+  margin-bottom: floor(@line-height-computed - 8);
+  margin-top: floor(@line-height-computed - 8);
+  list-style: none;
+  background-color: transparent;
+  border-radius: 0px;
+  > li {
+    display: inline-block;
+    &+li:before {
+      content: "|\00a0"; // Unicode space added since inline-block means non-collapsing white-space
+      padding: 0 5px;
+      color: @breadcrumb-color;
+    }
+    a {
+      color:@nau-light-sage;
+      &:hover {
+        text-decoration:none;
+        color:@nau-light-sage;
+      }
+    }
+  }
+  > .active {
+    color: @breadcrumb-active-color;
+  }
+}
+
+// Links
+
+a {
+  color: @nau-light-sage;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: @nau-light-sage;
+    text-decoration: none;
+    opacity:0.7;
+  }
+
+  &:focus {
+    .tab-focus();
+  }
+}
+
+//Labels
+
+.label {
+  border-radius: 0px;
+  .shadow()
+}
+
+.label-primary {
+  .label-variant(@label-primary-bg);
+  border-left:5px solid @nau-light-sage;
+}
+
+//Badges
+.badge {
+  .shadow(@horizontal: 0px; @vertical: 5px; @spread: -6px; @color: #555;);
+  display: inline-block;
+  min-width: 10px;
+  padding: 8px 10px;
+  font-size: @font-size-large;
+  font-weight: normal;
+  color: @badge-color;
+  line-height: @badge-line-height;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+  background-color: @badge-bg;
+  border-radius: @badge-border-radius;
+
+  // Empty badges collapse automatically (not available in IE8)
+  &:empty {
+    display: none;
+  }
+}
+
