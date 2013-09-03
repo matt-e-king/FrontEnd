@@ -197,28 +197,38 @@ h3 {
 	}
 }
 
+.opaque-section {
+	position:relative;
+	width:100%;
+	height:65px;
+	opacity:.5;
+	background-color:#000000;
+}
+
 .stories-btn {
 	position:relative;
 	z-index:2000;
-	width:60px;
-	margin:0px auto;
-	top:-30px;
+	height:65px;
+	background-color:#000000;
 	button {
 		/*.shadow(@horizontal: 0px; @vertical: 0px; @spread: -1px; @color: #999;);*/
+		position:absolute;
+		margin:-50px 20.5%;
 		color:#fff;
-		height:60px;
-		width:60px;
+		height:100px;
+		width:100px;
 		font-size:3em;
 		border-radius: 50%;
-
-		.btn-colors(@nau-darker-blue);
+		.btn-colors(#202020);
+		border:6px solid #000000;
 		i {
 			position:relative;
-			top:-7px;
+			top:0px;
 		}
 		&:hover,active {
 			color:#fff;
-			.btn-colors(@nau-darker-blue);
+			.btn-colors(#202020);
+			border:6px solid #000000;
 			}
 		}
 
@@ -238,7 +248,7 @@ ul.first-level-links {
 					&:hover,
 	      			&:focus {
 		       			text-decoration: none;
-		        		background-color: @nau-dark-blue;
+		        		background-color: #000000;
 		        	
 	     			}
 				}
@@ -260,7 +270,7 @@ ul.first-level-links {
 	      			&:focus {
 	      				opacity:.5;
 		       			text-decoration: none;
-		        		background-color: @nau-dark-blue;
+		        		background-color: #000000;
 		        	
 	     			}
 				}
@@ -280,7 +290,6 @@ ul.first-level-links {
 	bottom:0px;
 	width:100%;
 	color:#fff;
-	background-color:@nau-dark-blue;
 
 	.row {
 		margin-left:0px;
@@ -290,7 +299,8 @@ ul.first-level-links {
 }
 
 .stories-collapse {
-
+	z-index:500;
+	background-color:#000000;
 
 	p {
 		font-size:.88em;

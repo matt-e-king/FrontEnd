@@ -42,13 +42,11 @@
 
 .btn-primary {
   background-color: #0c2842;
-  border: none;
   border-radius: 0;
 }
 
 .btn-primary:hover {
   background-color: #0c2842;
-  border: none;
   opacity: 0.7;
 }
 
