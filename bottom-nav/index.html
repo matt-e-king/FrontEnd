@@ -11,103 +11,107 @@
 </head>
 <body>
 
-	<button type="button" class="menu-btn btn btn-primary visible-xs">
-
-			<span class="sr-only">Toggle navigation</span>
-      		<span class="glyphicon glyphicon-th-list"></span>
-			only at NAU
-			
-
-		</button>
+	<header>
 
 
-	<div id="bg-picture">
+		<div class="visible-xs">
 
-		<div class="only-nau hidden-xs">
+			<button type="button" data-toggle="collapse" data-target=".menu-collapse" class="menu-btn btn btn-primary">
+
+				<span class="sr-only">Toggle navigation</span>
+		  		<span class="glyphicon glyphicon-th-list"></span>
+				only at NAU
+					
+			</button>
+
+			<div class="menu-collapse collapse">
+				<ul class="category-nav nav nav-stacked">
+
+					<li style="border-left:7px solid #6da3bf;"><a href="category.html">OPPORTUNITIES FOR SUCCESS</a></li>
+					<li style="border-left:7px solid #ef9616;"><a href="category.html">GLOBAL IMPACT</a></li>
+					<li style="border-left:7px solid #a87d99;"><a href="category.html">INNOVATION AND DEVELOPMENT</a></li>
+					<li style="border-left:7px solid #705c41;"><a href="category.html">INITIATIVES AND PROGRAMS</a></li>
+
+				</ul>
+			</div>
+
+			<img src="assets/img/old_main.jpg" alt="" title="" class="img-responsive"/>
+
+		</div>
+
+	</header>
+
+	<div id="bg-picture" class="hidden-xs">
+
+		<div class="only-nau">
 			<h1>only at NAU</h1>
 			<p>The pines and peaks of Northern Arizona<br />inspire ground-breaking research<br />and a passion for the outdoors</p>
 		</div>
 
 	</div>
 
-	<button type="button" class="homepage-circles btn btn-default" style="top:10%; left:25%; background-color:#6da3bf;"></button>
-	<button type="button" class="homepage-circles btn btn-default" style="top:65%; left:65%; background-color:#ef9616;"></button>
-	<button type="button" class="homepage-circles btn btn-default" style="top:35%; left:10%; background-color:#a87d99;"></button>
+	<button type="button" class="homepage-circles btn btn-default hidden-xs" style="top:10%; left:25%; background-color:#6da3bf;"></button>
+	<button type="button" class="homepage-circles btn btn-default hidden-xs" style="top:65%; left:65%; background-color:#cc6600;"></button>
+	<button type="button" class="homepage-circles btn btn-default hidden-xs" style="top:35%; left:10%; background-color:#a87d99;"></button>
 
 	<footer>
 
-		<div class="stories">
-
-			<div class="opaque-section">&nbsp;</div>
-			
-			<div class="stories-btn">
-				<button type="button" class="btn btn-default" data-toggle="collapse" data-target=".stories-collapse"><i class="icon-chevron-down"></i></button>
-				<!--<div style="padding:5px; background-color:#fff; width:100%; z-index:1000; position:absolute; bottom:-10px"></div>-->
-			</div>
-			
-
-			<section class="stories-collapse collapse row">
-				
-							
-
-				<div class="col-xs-3">
-					<ul class="first-level-links nav nav-stacked">
-
-						<li style="border-left:7px solid #6da3bf;"><a href="">OPPORTUNITIES FOR SUCCESS</a></li>
-						<li style="border-left:7px solid #ef9616;"><a href="">GLOBAL IMPACT</a></li>
-						<li style="border-left:7px solid #a87d99;"><a href="">INNOVATION AND DEVELOPMENT</a></li>
-						<li style="border-left:7px solid #705c41;"><a href="">INITIATIVES AND PROGRAMS</a></li>
-
-					</ul>
-
-				</div>
-
-				<div class="col-xs-7">
-					<div class="col-xs-4">
-					<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
-					<h4 class="short-article-title">Lorem Ipsum something else</h4>
-					<p>
-						Very Small Description goes here.
-					</p>
-				</div>
-
-				<div class="col-xs-4">
-					<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
-					<h4 class="short-article-title">Lorem Ipsum something else</h4>
-					<p>
-						Very Small Description goes here.
-					</p>
-				</div>
-
-				<div class="col-xs-4">
-					<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
-					<h4 class="short-article-title">Lorem Ipsum something else</h4>
-					<p>
-						Very Small Description goes here.
-					</p>
-				</div>
-				</div>
-
-				<div class="col-xs-2">
-
-					<ul class="second-level-links nav nav-stacked">
-				
-						<li><a href="">How you can help</a></li>
-						<li><a href="">About the Campaign</a></li>
-						<li><a href="">Terms of Service</a></li>
-						<li><a href="">Privacy Policy</a></li>
-						<li><a href="">Contact Us</a></li>
-				
-					</ul>
-
-				</div>
-
-				<div style="clear:both; height:40px;">&nbsp;</div>
-			</section>
-			
-
+		<div class="opaque-section">&nbsp;</div>
+		
+		<div class="stories-btn">
+			<button type="button" class="btn btn-default hidden-xs" data-toggle="collapse" data-target=".stories-collapse"><i class="icon-chevron-up"></i></button>
+			<!--<div style="padding:5px; background-color:#fff; width:100%; z-index:1000; position:absolute; bottom:-10px"></div>-->
 		</div>
+		
 
+		<section class="stories-collapse collapse row">				
+
+			<div class="col-xs-3 hidden-xs">
+				<ul class="category-nav nav nav-stacked">
+
+					<li style="border-left:7px solid #6da3bf;"><a href="category.html">OPPORTUNITIES FOR SUCCESS</a></li>
+					<li style="border-left:7px solid #ef9616;"><a href="category.html">GLOBAL IMPACT</a></li>
+					<li style="border-left:7px solid #a87d99;"><a href="category.html">INNOVATION AND DEVELOPMENT</a></li>
+					<li style="border-left:7px solid #705c41;"><a href="category.html">INITIATIVES AND PROGRAMS</a></li>
+
+				</ul>
+
+			</div>
+
+			<div class="col-xs-12 col-sm-6">
+				<div class="col-xs-12 col-sm-4">
+				<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
+				<h4 class="short-article-title">Lorem Ipsum something else</h4>
+				
+			</div>
+
+			<div class="col-xs-12 col-sm-4">
+				<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
+				<h4 class="short-article-title">Lorem Ipsum something else</h4>
+				
+			</div>
+
+			<div class="col-xs-12 col-sm-4">
+				<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
+				<h4 class="short-article-title">Lorem Ipsum something else</h4>
+				
+			</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-3">
+
+				<ul class="cta-nav nav nav-stacked">
+			
+					<li style="border-left:7px solid #003466;"><a href="">WAYS TO HELP <i class="icon-chevron-right"></i></a></li>
+			
+				</ul>
+				<p class="admin-links"><a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></p>
+
+			</div>
+
+			<div style="clear:both; height:40px;">&nbsp;</div>
+
+		</section>
 
 	</footer>
 

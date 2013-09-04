@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+@import url(http://fonts.googleapis.com/css?family=Roboto:100);
 
 @import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=d25b1f2e-f94b-4ed4-a267-626ac4a38745");
 
@@ -29,7 +29,9 @@
 }
 
 .roboto-font {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 100;
 }
 
 .five-column-content .col-sm-2 {
@@ -41,13 +43,12 @@
 }
 
 .btn-primary {
-  background-color: #0c2842;
+  background-color: #003466;
   border-radius: 0;
 }
 
 .btn-primary:hover {
-  background-color: #0c2842;
-  opacity: 0.7;
+  background-color: #003466;
 }
 
 .breadcrumb {
@@ -84,15 +85,14 @@
 }
 
 a {
-  color: #619080;
+  color: #003466;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: #619080;
-  text-decoration: none;
-  opacity: 0.7;
+  color: #003466;
+  text-decoration: underline;
 }
 
 a:focus {
@@ -138,4 +138,10 @@ a:focus {
 
 .badge:empty {
   display: none;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: transparent;
 }
