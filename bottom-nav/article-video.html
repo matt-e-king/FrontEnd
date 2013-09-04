@@ -9,64 +9,41 @@
 </head>
 <body>
 
+
 	<header>
 
-		<button type="button" class="menu-btn btn btn-primary pull-left hidden-xs">
+		<button type="button" data-toggle="collapse" data-target=".menu-collapse" class="menu-btn btn btn-primary visible-xs">
 
 			<span class="sr-only">Toggle navigation</span>
-      		<span class="glyphicon glyphicon-th-list" style="margin-left:10px;"></span>
-			menu
-			
-
-		</button>
-
-		<button type="button" class="menu-btn btn btn-primary visible-xs">
-
-			<span class="sr-only">Toggle navigation</span>
-      		<span class="glyphicon glyphicon-th-list"></span>
+	  		<span class="glyphicon glyphicon-th-list"></span>
 			only at NAU
-			
-
+				
 		</button>
 
-		<div class="feed-bar well well-sm hidden-xs">
-			<strong>Feed:</strong> Lorem ipsum something else and more words for you...
+		<div class="menu-collapse collapse">
+				<ul class="category-nav nav nav-stacked">
+
+					<li style="border-left:7px solid #6da3bf;"><a href="category.html">OPPORTUNITIES FOR SUCCESS</a></li>
+					<li style="border-left:7px solid #ef9616;"><a href="category.html">GLOBAL IMPACT</a></li>
+					<li style="border-left:7px solid #a87d99;"><a href="category.html">INNOVATION AND DEVELOPMENT</a></li>
+					<li style="border-left:7px solid #705c41;"><a href="category.html">INITIATIVES AND PROGRAMS</a></li>
+
+				</ul>
+			</div>
+
+
+		<div id="article-bg-picture" style="border-left:30px solid #557665">
+			<img src="assets/img/article-video.jpg" alt="" class="img-responsive"/>
 		</div>
-
-		<!--<nav class="left-nav">
-
-			<ul class="nav nav-stacked">
-				<li><a href="">HOME</a></li>
-				<li><a href="">STUDENT EXPERIEINCES</a></li>
-				<li><a href="">ACADEMICS & RESEARCH</a></li>
-				<li><a href="">SUSTAINABILITY</a></li>
-				<li><a href="">NATIVE AMERICAN STUDENTS</a></li>
-				<li><a href="">WORKFORCE DEVELOPMENT</a></li>
-				<li><a href="">EVENTS</a></li>
-				
-			</ul>
-
-		</nav>-->
-
-	</header>
-
-	<div id="article-bg-picture">
-		<img src="assets/img/article-video.jpg" alt="" class="img-responsive"/>
-	</div>
+		
 		<div class="only-nau hidden-xs">
 			<h1>only at NAU</h1>
 		</div>
 
-		<!--<div class="stories">
-			<div class="stories-btn">
-				<button type="button" class="btn btn-default">stories</button>
-			</div>
-			<div style="padding:5px; background-color:#fff; width:100%"></div>
-
-		</div>-->
+	</header>
 
 
-	<section id="body-content" class="container">
+	<section id="main" class="container">
 		<div class="social">
 			<i class="icon-twitter"></i>
 			<i class="icon-facebook"></i>
@@ -108,13 +85,12 @@
 
 					<hr class="green lg" />
 
-					<div class="cta well well-lg">
+					<div class="cta">
 						<h3>
 
 							<a href="#">
-							<span class="glyphicon glyphicon-play-circle"></span>
-							CTA Goes Here
-							<span class="badge pull-right">Learn More</span>
+							CTA - BASED ON PAGE CONTENT
+							<i class="icon-chevron-right"></i>
 							</a>
 
 						</h3>
@@ -146,61 +122,64 @@
 
 	</section>
 
-	<footer class="inner-page">
+	<footer>
 
-		<div class="stories">
-			
-			<div class="stories-btn">
-				<button type="button" class="btn btn-default" data-toggle="collapse" data-target=".stories-collapse">student life</button>
-				<div style="padding:5px; background-color:#fff; width:100%; z-index:1000; position:absolute; bottom:-10px"></div>
-			</div>
-			
-			<div class="white-bar"></div>
-
-			<section class="stories-collapse collapse">
-				<div style="padding:5px; background-color:#fff; width:100%"></div>
-				<div class="four-column-content row">
-
-
-
-				<div class="col-xs-6 col-sm-3">
-					<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
-					<h4 class="short-article-title">Lorem Ipsum something else</h4>
-					<p>
-						Sub content for each article that will be a small description, or excerpt, before the user clicks into the full article.
-					</p>
-				</div>
-
-				<div class="col-xs-6 col-sm-3">
-					<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
-					<h4 class="short-article-title">Lorem Ipsum something else</h4>
-					<p>
-						Sub content for each article that will be a small description, or excerpt, before the user clicks into the full article.
-					</p>
-				</div>
-
-				<div class="col-xs-6 col-sm-3">
-					<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
-					<h4 class="short-article-title">Lorem Ipsum something else</h4>
-					<p>
-						Sub content for each article that will be a small description, or excerpt, before the user clicks into the full article.
-					</p>
-				</div>
-
-				<div class="col-xs-6 col-sm-3">
-					<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
-					<h4 class="short-article-title">Lorem Ipsum something else</h4>
-					<p>
-						Sub content for each article that will be a small description, or excerpt, before the user clicks into the full article.
-					</p>
-				</div>
-
-			</div>
-			<div style="padding:5px; background-color:#fff; width:100%"></div>
-			</section>
-
+		<div class="opaque-section">&nbsp;</div>
+		
+		<div class="stories-btn">
+			<button type="button" class="btn btn-default hidden-xs" data-toggle="collapse" data-target=".stories-collapse"><i class="icon-chevron-up"></i></button>
+			<!--<div style="padding:5px; background-color:#fff; width:100%; z-index:1000; position:absolute; bottom:-10px"></div>-->
 		</div>
+		
 
+		<section class="stories-collapse collapse row">				
+
+			<div class="col-xs-3 hidden-xs">
+				<ul class="category-nav nav nav-stacked">
+
+					<li style="border-left:7px solid #6da3bf;"><a href="category.html">OPPORTUNITIES FOR SUCCESS</a></li>
+					<li style="border-left:7px solid #ef9616;"><a href="category.html">GLOBAL IMPACT</a></li>
+					<li style="border-left:7px solid #a87d99;"><a href="category.html">INNOVATION AND DEVELOPMENT</a></li>
+					<li style="border-left:7px solid #705c41;"><a href="category.html">INITIATIVES AND PROGRAMS</a></li>
+
+				</ul>
+
+			</div>
+
+			<div class="col-xs-12 col-sm-6">
+				<div class="col-xs-12 col-sm-4">
+				<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
+				<h4 class="short-article-title">Lorem Ipsum something else</h4>
+				
+			</div>
+
+			<div class="col-xs-12 col-sm-4">
+				<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
+				<h4 class="short-article-title">Lorem Ipsum something else</h4>
+				
+			</div>
+
+			<div class="col-xs-12 col-sm-4">
+				<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
+				<h4 class="short-article-title">Lorem Ipsum something else</h4>
+				
+			</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-3">
+
+				<ul class="cta-nav nav nav-stacked">
+			
+					<li style="border-left:7px solid #003466;"><a href="">WAYS TO HELP <i class="icon-chevron-right"></i></a></li>
+			
+				</ul>
+				<p class="admin-links"><a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></p>
+
+			</div>
+
+			<div style="clear:both; height:40px;">&nbsp;</div>
+
+		</section>
 
 	</footer>
 
