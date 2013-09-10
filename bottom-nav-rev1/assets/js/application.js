@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
-	var pageHeight = $(document).height();
-	var adjustedHeight = pageHeight * .60;
+	var pageHeight = $(window).height();
+	var adjustedHeight = pageHeight * .70;
 
-	$('.stories-container').height(adjustedHeight);
+	$('.stories-parent').height(adjustedHeight);
 
 
 });
