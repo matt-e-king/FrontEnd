@@ -9,5 +9,11 @@ $(document).ready(function() {
   		interval: false
 	});
 
+	var footerBtn = $('.footer-btn');
+
+	footerBtn.on('click', function() {
+		classie.toggle(this, 'flip');
+	});
+
 
 });
