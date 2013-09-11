@@ -181,16 +181,16 @@ a:focus {
 
 .carousel-control .icon-prev,
 .carousel-control .icon-next,
-.carousel-control .icon-chevron-sign-left,
-.carousel-control .icon-chevron-sign-right {
+.carousel-control .icon-chevron-left,
+.carousel-control .icon-chevron-right {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 0;
   z-index: 3000;
   display: inline-block;
 }
 
-.carousel-control .icon-chevron-sign-right {
+.carousel-control .icon-chevron-right {
   right: 0 !important;
 }
 
