@@ -180,3 +180,76 @@ a {
   }
 }
 
+//Carousel 
+
+.carousel-control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 5%;
+  .opacity(@carousel-control-opacity);
+  font-size: 3em;
+  color: @carousel-control-color;
+  text-align: center;
+  text-shadow: @carousel-text-shadow;
+  // We can't have this transition here because webkit cancels the carousel
+  // animation if you trip this while in the middle of another animation.
+
+  // Set gradients for backgrounds
+  &.left {
+    //#gradient > .horizontal(@start-color: rgba(0,0,0,.5); @end-color: rgba(0,0,0,.0001));
+    background-image:none;
+    left:-3%;
+  }
+  &.right {
+    left: auto;
+    right: -3%;
+    //#gradient > .horizontal(@start-color: rgba(0,0,0,.0001); @end-color: rgba(0,0,0,.5));
+    background-image:none;
+  }
+
+  // Hover/focus state
+  &:hover,
+  &:focus {
+    color: @carousel-control-color;
+    text-decoration: none;
+    .opacity(.9);
+  }
+
+  // Toggles
+  .icon-prev,
+  .icon-next,
+  .icon-chevron-sign-left,
+  .icon-chevron-sign-right {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    z-index: 3000;
+    display: inline-block;
+  }
+
+  .icon-chevron-sign-right {
+    right:0% !important;
+  }
+  .icon-prev,
+  .icon-next {
+    width:  20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    font-family: serif;
+  }
+
+  .icon-prev {
+    &:before {
+      content: none;
+    }
+  }
+  .icon-next {
+    &:before {
+      content: none;
+    }
+  }
+}
+
