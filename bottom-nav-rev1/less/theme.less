@@ -17,7 +17,7 @@
 @nau-orange:#bba977;
 @nav-link-hover-bg: @nau-blue;
 @light-grey: #767676;
-@dark-grey: #595959;
+@dark-grey: #3e3e3e;
 @font-size-base: 16px;
 @label-primary-bg: @nau-blue;
 @badge-border-radius:0px;
@@ -87,6 +87,7 @@ src:url("../../fonts/b86795e4-74a2-4c86-a865-96f08c38e2ca.eot?#iefix") format("e
   }
 }
 
+
 .breadcrumb {
   font-size:12px;
   padding: 0px 0px;
@@ -115,6 +116,20 @@ src:url("../../fonts/b86795e4-74a2-4c86-a865-96f08c38e2ca.eot?#iefix") format("e
   }
 }
 
+//text shadow 
+
+.white-shadow {
+  text-shadow: 1px 1px 1px #fff;
+}
+
+.black-shadow {
+  text-shadow: 1px 1px 1px #000;
+}
+
+p {
+  .white-shadow;
+}
+
 // Links
 
 a {
@@ -123,8 +138,8 @@ a {
 
   &:hover,
   &:focus {
-    color: @nau-blue;
-    text-decoration: underline;
+    color: @dark-grey;
+    text-decoration: none;
   }
 
   &:focus {
@@ -220,8 +235,7 @@ a {
   // Toggles
   .icon-prev,
   .icon-next,
-  .icon-chevron-left,
-  .icon-chevron-right {
+  .icon-chevron-left {
     position: absolute;
     top: 40%;
     left: 0%;
@@ -231,6 +245,10 @@ a {
 
   .icon-chevron-right {
     right:0% !important;
+    position: absolute;
+    top: 40%;
+    z-index: 3000;
+    display: inline-block;
   }
   .icon-prev,
   .icon-next {
