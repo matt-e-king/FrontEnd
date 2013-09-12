@@ -84,6 +84,18 @@
   color: #999999;
 }
 
+.white-shadow {
+  text-shadow: 1px 1px 1px #fff;
+}
+
+.black-shadow {
+  text-shadow: 1px 1px 1px #000;
+}
+
+p {
+  text-shadow: 1px 1px 1px #fff;
+}
+
 a {
   color: #003466;
   text-decoration: none;
@@ -91,8 +103,8 @@ a {
 
 a:hover,
 a:focus {
-  color: #003466;
-  text-decoration: underline;
+  color: #3e3e3e;
+  text-decoration: none;
 }
 
 a:focus {
@@ -181,8 +193,7 @@ a:focus {
 
 .carousel-control .icon-prev,
 .carousel-control .icon-next,
-.carousel-control .icon-chevron-left,
-.carousel-control .icon-chevron-right {
+.carousel-control .icon-chevron-left {
   position: absolute;
   top: 40%;
   left: 0;
@@ -191,7 +202,11 @@ a:focus {
 }
 
 .carousel-control .icon-chevron-right {
+  position: absolute;
+  top: 40%;
   right: 0 !important;
+  z-index: 3000;
+  display: inline-block;
 }
 
 .carousel-control .icon-prev,
