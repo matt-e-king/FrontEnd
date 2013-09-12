@@ -15,25 +15,6 @@ body,html {
 	position:relative;
 }
 
-.homepage-circles {
-	border-radius:50%;
-	width:60px;
-	height:60px;
-	opacity:.7;
-	position: absolute;
-	border:none;
-	text-align:center;
-	color:#fff;
-	font-size:1.5em;
-	&:hover {
-		opacity:.9;
-		width:70px;
-		height:70px;
-		color:#fff;
-		font-size:2em;
-	}
-}
-
 /*--------------------------------------------
 GENERAL STYLES
 --------------------------------------------*/
@@ -91,12 +72,11 @@ h3 {
 	color:@nau-light-sage;
 }
 
-.only-nau {
-
+.title-container {
 	color:#fff;
 
 	h1 {
-		font-size:100px;
+		font-size:6em;
 		letter-spacing: -8px;
 		.univers-font;
 		text-shadow: 1px 1px 10px #333;
@@ -110,40 +90,28 @@ h3 {
 		line-height:1em;
 		text-shadow: 1px 1px 10px #333;
 	}
-
 }
 
-.about-nau-campaign {
-	.only-nau;
+.title-container.about {
+	position:absolute;
 	text-align:left;
-	right:auto;
-	top:2%;
-	h1 {
-		font-size:80px;
+	width:100%;
+	top:10%;
+
+	img {
+		position:absolute;
+		right:0%;
+		top:15%;
 	}
 
-}
-
-img.homepage {
-		position:absolute;
-		text-align:right;
-		top:70%;
-		right:8%;
-}
-
-img.inner-page {
-	position:relative;
-	top:180px;
+	h1 {
+		font-size:4em;
+		letter-spacing:-4px;
+	}
 }
 
 
-.homepage.only-nau {
-	position:absolute;
-	text-align:right;
-	right:8%;
-	top:5%;
-}
-
+/*Hover states for animation*/
 .dark-grey-hover {
 	color:@dark-grey;
 	cursor:pointer;
@@ -157,6 +125,38 @@ img.inner-page {
 .white-hover {
 	color:#fff;
 	cursor:pointer;
+}
+
+.img-hover {
+	opacity:0.8;
+	&:hover {
+		opacity:1.0;
+	};
+}
+
+
+/*Aniamtions*/
+
+.homepage-circles, .bottom-nav-add {
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+transition: all 0.5s ease;
+}
+
+a,
+.category-nav a,
+.category-nav a i,
+.social i,
+.admin-links a,
+.short-article-title a,
+.side-nav li a,
+.side-nav li a div,
+.side-nav li a i,
+.three-column img,
+.related-bar img {
+-webkit-transition: all 0.2s ease;
+-moz-transition: all 0.2s ease;
+transition: all 0.2s ease;
 }
 
 /*Header*/
@@ -185,12 +185,34 @@ header {
 		> a {
 			color:@light-grey;
 			padding:0px 15px 5px 15px;
+		}	
+	}
+}
+
+.side-nav.article {
+	>li {
+		> a {
 			> div { display:inline-block; width:25px;}
 			&:hover {
 				.dark-grey-hover;
 				> div { margin-right:5px; }
 			}
-		}	
+		}
+	}
+}
+
+.side-nav.about {
+	>li {
+		> a {
+			> i { 
+				position:relative;
+				left:5px;
+			}
+			&:hover {
+				.dark-grey-hover;
+				> i { left:9px; }
+			}
+		}
 	}
 }
 
@@ -211,6 +233,11 @@ footer {
 }
 
 /*Footer Slider*/
+
+.stories-container {
+	padding-top:40px;
+}
+
 .stories-btn {
 	position:relative;
 	z-index:2000;
@@ -242,21 +269,27 @@ footer {
 
 } 
 
-.img-hover {
-	opacity:0.8;
-	&:hover {
-		opacity:1.0;
-	};
+.bottom-links {
+	position:fixed;
+	width:100%;
+	bottom:15px;
+	left:0px;
+	z-index:6000;
 }
 
 .three-column {
-	margin-bottom:20px;
+	margin-bottom:25px;
 }
 
 footer .three-column img, .related-bar img {
 	.img-hover;
 }
 
+.flip {
+	transform: rotate(180deg);
+	-ms-transform: rotate(180deg); /* IE 9 */
+	-webkit-transform: rotate(180deg);
+}
 
 
 .stories-parent {
@@ -279,10 +312,6 @@ footer .three-column img, .related-bar img {
 	padding:20px 30px;
 	position:relative;
 	z-index:5000;
-}
-
-.bottom-nav-add {
-	top:-15px;
 }
 
 .category-nav {
@@ -333,27 +362,19 @@ HOME PAGE SPECIFIC STYLES
 	overflow:auto;
 }
 
-.homepage-circles, .bottom-nav-add {
--webkit-transition: all 0.5s ease;
--moz-transition: all 0.5s ease;
-transition: all 0.5s ease;
-}
+.title-container.homepage {
+	position:absolute;
+	text-align:right;
+	right:8%;
+	top:5%;
 
-a,
-.category-nav a,
-.category-nav a i,
-.social i,
-.admin-links a,
-.short-article-title a,
-.side-nav li a,
-.side-nav li a div,
-.three-column img,
-.related-bar img {
--webkit-transition: all 0.2s ease;
--moz-transition: all 0.2s ease;
-transition: all 0.2s ease;
+	img {
+		position:absolute;
+		text-align:right;
+		top:140%;
+		right:0%;
+	}
 }
-
 
 #bg-picture {
 	background-image:url('../../assets/img/old_main.jpg');
@@ -366,12 +387,24 @@ transition: all 0.2s ease;
 	overflow:hidden; 
 }
 
-.flip {
-	transform: rotate(180deg);
-	-ms-transform: rotate(180deg); /* IE 9 */
-	-webkit-transform: rotate(180deg);
+.homepage-circles {
+	border-radius:50%;
+	width:60px;
+	height:60px;
+	opacity:.7;
+	position: absolute;
+	border:none;
+	text-align:center;
+	color:#fff;
+	font-size:1.5em;
+	&:hover {
+		opacity:.9;
+		width:70px;
+		height:70px;
+		color:#fff;
+		font-size:2em;
+	}
 }
-
 
 
 /*--------------------------------------------
@@ -389,8 +422,21 @@ ARTICLE PAGE SPECIFIC STYLES
 
 
 #main {
-	margin-top:50px;
+	margin-top:25px;
 	padding-bottom:150px;
+}
+
+
+.title-container.article {
+	position:absolute;
+	text-align:right;
+	width:100%;
+	top:5%;
+
+	img {
+		position:relative;
+		top:50px;
+	}
 }
 
 .article-title, .category-title {
@@ -530,6 +576,10 @@ RESPONSIVE STYLES
 
 @media (min-width: @screen-sm) {
 
+	//.title-container is inherited from the main styles above
+	//.title-container for article pages is inherited from main .title-container class
+	//.title-container for about pages is inherited from main .title-container class
+
 	.menu-btn {
 		width:200px;
 		height:50px;
@@ -555,39 +605,39 @@ RESPONSIVE STYLES
 	}
 
 
-.opaque-section {
-	height:45px;
-}
-
-/*Footer Slider*/
-.stories-btn {
-	height:55px;
-	button {
-		top:-35px;
-		height:70px;
-		width:70px;
-		font-size:2em;
+	.opaque-section {
+		height:45px;
 	}
 
-} 
+	/*Footer Slider*/
+	.stories-btn {
+		height:55px;
+		button {
+			top:-35px;
+			height:70px;
+			width:70px;
+			font-size:2em;
+		}
 
-.category-nav {
-	font-size:.88em;
-	.black-shadow;
-}
+	} 
 
-.bottom-nav {
-	padding:10px 30px;
-}
+	.category-nav {
+		font-size:.88em;
+		.black-shadow;
+	}
+
+	.bottom-nav {
+		padding:10px 30px;
+	}
 
 
-.short-article-title {
-	font-size:.88em;
-}
+	.short-article-title {
+		font-size:.88em;
+	}
 
-.bottom-nav-add {
-	top:-10px;
-}
+	.bottom-nav-add {
+		top:-10px;
+	}
 
 
 
@@ -595,43 +645,64 @@ RESPONSIVE STYLES
 
 @media (min-width: @screen-md) {
 
-.only-nau {
+	.title-container {
 
-	h1 {
-		font-size:130px;
+		h1 {
+			font-size:8em;
+		}
+		p {
+			font-size:2.5em;
+		}
+
 	}
-	p {
-		font-size:2.5em;
+
+	.title-container.about {
+		h1 {
+			font-size:4.5em;
+		}
 	}
 
-}
+	//.title-container h1 for article pages is inherited from main .title-container class
 
-.short-article-title {
-	font-size:1em;
-}
-
-.opaque-section {
-	height:55px;
-}
-	/*Footer Slider*/
-.stories-btn {
-	height:65px;
-	button {
-		top:-40px;
-		height:80px;
-		width:80px;
-		font-size:2.5em;
+	.short-article-title {
+		font-size:1em;
 	}
-} 
+
+	.opaque-section {
+		height:55px;
+	}
+		/*Footer Slider*/
+	.stories-btn {
+		height:65px;
+		button {
+			top:-40px;
+			height:80px;
+			width:80px;
+			font-size:2.5em;
+		}
+	} 
 
 
-.category-nav {
-	font-size:1em;
-}
+	.category-nav {
+		font-size:1em;
+	}
 
-.bottom-nav {
-	padding:15px 30px;
-}
+	.bottom-nav {
+		padding:15px 30px;
+	}
+
+	.carousel-control {
+		// Toggles
+		.icon-prev,
+		.icon-next,
+		.icon-chevron-left {
+			top: 38%;
+		}
+
+		.icon-chevron-right {
+			top: 38%;
+		}
+	}
 
 
 }
@@ -639,49 +710,63 @@ RESPONSIVE STYLES
 
 @media (min-width: @screen-lg) {
 
-.only-nau {
+	.title-container {
 
-	h1 {
-		font-size:170px;
+		h1 {
+			font-size:10.5em;
+
+		}
+		p {
+			font-size:3em;
+		}
+	}
+
+	.title-container.article {
+		h1 {
+			font-size:8.5em;
+		}
+
+		img {
+			top:100px;
+		}
+	}
+
+	.opaque-section {
+		height:65px;
+	}
+
+	.bottom-nav {
+		padding:15px 30px;
+	}
+
+		/*Footer Slider*/
+	.stories-btn {
+		height:85px;
+		button {
+			top:-50px;
+			height:100px;
+			width:100px;
+			font-size:3.2em;
+		}
+	}
+
+	.bottom-nav-add {
+		top:-15px;
+	}
+	.carousel-control {
+
+		// Toggles
+		.icon-prev,
+		.icon-next,
+		.icon-chevron-left {
+			top: 39%;
+		}
+
+		.icon-chevron-right {
+			top: 39%;
+		}
 
 	}
-	p {
-		font-size:3em;
-	}
-}
-
-.about-nau-campaign {
-	h1 {
-		font-size:100px;
-	}
-}
-
-.only-nau h1.inner-page {
-	font-size:136px;
-}
-
-.opaque-section {
-	height:65px;
-}
-
-.bottom-nav {
-	padding:30px 30px;
-}
-
-	/*Footer Slider*/
-.stories-btn {
-	height:85px;
-	button {
-		top:-50px;
-		height:100px;
-		width:100px;
-		font-size:3.2em;
-	}
-}
-
-.bottom-nav-add {
-	top:-15px;
-}
 
 
 }
