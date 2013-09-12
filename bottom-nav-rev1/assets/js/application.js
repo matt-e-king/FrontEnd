@@ -10,19 +10,20 @@ $(document).ready(function() {
 	});
 
 	var footerBtn = $('.footer-btn');
-	var bottomNav = $('.bottom-nav')[0];
+	var bottomNav = $('.bottom-nav')[0]; 
+	var bottomLinks = $('.bottom-links')[0]; 
 
 	footerBtn.on('click', function() {
 		classie.toggle(this, 'flip');
 	});
 
-	/*$('.stories-collapse').on('shown.bs.collapse', function() {
-		classie.add(bottomNav, 'bottom-nav-add');
+	$('.stories-collapse').on('shown.bs.collapse', function() {
+		classie.add(bottomLinks, 'in');
 	});
 
-	$('.stories-collapse').on('hidden.bs.collapse', function() {
-		classie.remove(bottomNav, 'bottom-nav-add');
-	});*/
+	$('.stories-collapse').on('hide.bs.collapse', function() {
+		classie.remove(bottomLinks, 'in');
+	});
 
 
 });
