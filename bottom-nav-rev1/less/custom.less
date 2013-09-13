@@ -64,12 +64,20 @@ hr.sm {
 	height:3px;
 }
 
-h2 {
-	font-size:2.5em;
+h1 {
+	font-size:2em;
 }
 
 h3 {
 	color:@nau-light-sage;
+}
+
+.border-green {
+	border-left:none;
+}
+
+.border-blue {
+	border-left:none;
 }
 
 .title-container {
@@ -173,14 +181,16 @@ header {
 
 	.menu-collapse {
 		background-color:@nau-blue;
-		padding-top:15px;
+		> ul {
+			padding:15px;
+		}
 	}
 }
 
 /*Side nav*/
 
 .side-nav {
-	margin-bottom:35px;
+	margin:35px 0px;
 	>li {
 		> a {
 			color:@light-grey;
@@ -270,7 +280,7 @@ footer {
 } 
 
 .bottom-links {
-	position:fixed;
+	position:absolute;
 	width:100%;
 	bottom:15px;
 	left:0px;
@@ -278,7 +288,9 @@ footer {
 }
 
 .three-column {
-	margin-bottom:25px;
+	> div {
+		margin-bottom:25px;
+	}
 }
 
 footer .three-column img, .related-bar img {
@@ -423,7 +435,7 @@ ARTICLE PAGE SPECIFIC STYLES
 
 #main {
 	margin-top:25px;
-	padding-bottom:150px;
+	margin-bottom:75px;
 }
 
 
@@ -479,6 +491,7 @@ footer {
 .related-bar {
 	margin-top:10px;
 	> img {
+		cursor:pointer;
 		margin-bottom:10px;
 	}
 }
@@ -495,7 +508,7 @@ footer {
 	font-size:1.1em;
 	h3 {
 		text-transform: uppercase;
-		font-size:2.5em;
+		font-size:1.5em;
 		margin-top:5px;
 		font-weight:bold;
 		a {
@@ -580,6 +593,10 @@ RESPONSIVE STYLES
 	//.title-container for article pages is inherited from main .title-container class
 	//.title-container for about pages is inherited from main .title-container class
 
+	#main {
+		padding-bottom:150px;
+	}
+
 	.menu-btn {
 		width:200px;
 		height:50px;
@@ -596,14 +613,33 @@ RESPONSIVE STYLES
 		color:@white;
 	}
 
+	h1 {
+		font-size:2.5em;
+	}
+
+	.bottom-links {
+		position:fixed;
+	}
+
 	#homepage {
 		overflow:hidden;
+	}
+
+	.side-nav {
+		margin:0px 0px 35px 0px;
 	}
 
 	.stories-collapse.collapse {
 		display:none;
 	}
 
+	.border-green {
+		border-left:30px solid @nau-sage;
+	}
+
+	.border-blue {
+		border-left:30px solid @nau-blue;
+	}
 
 	.opaque-section {
 		height:45px;
@@ -637,6 +673,27 @@ RESPONSIVE STYLES
 
 	.bottom-nav-add {
 		top:-10px;
+	}
+
+	.left-content-cta {
+		h3 {
+			font-size:2.5em;
+		}
+	}
+
+	.carousel-control {
+
+		// Toggles
+		.icon-prev,
+		.icon-next,
+		.icon-chevron-left {
+			top: 35%;
+		}
+
+		.icon-chevron-right {
+			top: 35%;
+		}
+
 	}
 
 

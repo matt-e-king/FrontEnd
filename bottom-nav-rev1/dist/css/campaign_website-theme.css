@@ -195,7 +195,7 @@ a:focus {
 .carousel-control .icon-next,
 .carousel-control .icon-chevron-left {
   position: absolute;
-  top: 35%;
+  top: 40%;
   left: 0;
   z-index: 3000;
   display: inline-block;
@@ -203,7 +203,7 @@ a:focus {
 
 .carousel-control .icon-chevron-right {
   position: absolute;
-  top: 35%;
+  top: 40%;
   right: 0 !important;
   z-index: 3000;
   display: inline-block;
