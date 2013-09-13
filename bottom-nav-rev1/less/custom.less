@@ -15,6 +15,10 @@ body,html {
 	position:relative;
 }
 
+body.modal-open {
+	margin-right:0px;
+}
+
 /*--------------------------------------------
 GENERAL STYLES
 --------------------------------------------*/
@@ -151,6 +155,12 @@ h3 {
 transition: all 0.5s ease;
 }
 
+.fade {
+-webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+transition: all 1s ease;
+}
+
 a,
 .category-nav a,
 .category-nav a i,
@@ -165,6 +175,119 @@ a,
 -webkit-transition: all 0.2s ease;
 -moz-transition: all 0.2s ease;
 transition: all 0.2s ease;
+}
+
+@-webkit-keyframes text-circle {
+  25% { width:150px; height:150px; font-size:6em; }
+  100% { left:43%; top:100px; width:60px; height:60px;}
+}
+
+@-webkit-keyframes camera-circle {
+  50% { width:5px; height:10px; font-size:.2em; }
+  100% { left:47.6%; top:100px; width:60px; height:60px;}
+}
+
+@-webkit-keyframes video-circle {
+  50% { width:30px; height:30px; font-size:1em; }
+  100% { left:52%; top:100px; width:60px; height:60px;}
+}
+
+@keyframes text-circle {
+  25% { width:150px; height:150px; font-size:6em; }
+  100% { left:43%; top:100px; width:60px; height:60px;}
+}
+
+@keyframes camera-circle {
+  50% { width:5px; height:10px; font-size:.2em; }
+  100% { left:47.6%; top:100px; width:60px; height:60px;}
+}
+
+@keyframes video-circle {
+  50% { width:30px; height:30px; font-size:1em; }
+  100% { left:52%; top:100px; width:60px; height:60px;}
+}
+
+.animation-mixin (@name, @duration: 1s, @delay: 0s, @ease: ease) {
+	-webkit-animation: 	@name @duration @delay @ease normal forwards;
+	-moz-animation:    	@name @duration @delay @ease normal forwards;
+	-ms-animation:     	@name @duration @delay @ease normal forwards;
+	-animation:     	@name @duration @delay @ease normal forwards;
+	animation:     	@name @duration @delay @ease normal forwards;
+}
+
+#text {
+	top:35%;
+	left:10%;
+	background-color:#a87d99;
+	z-index:3500;
+}
+
+#camera {
+	top:10%;
+	left:25%;
+	background-color:#6da3bf;
+	z-index:3500;
+}
+
+#video {
+	top:65%;
+	left:65%;
+	background-color:#cc6600;
+	z-index:3500;
+}
+
+
+.camera-circle-animation {
+	.animation-mixin(@name: camera-circle, @duration: 1s, @delay: 0s, @ease: ease);
+}
+
+.text-circle-animation {
+	.animation-mixin(@name: text-circle, @duration: 1s, @delay: 0s, @ease: ease);
+}
+
+.video-circle-animation {
+	.animation-mixin(@name: video-circle, @duration: 1s, @delay: 0s, @ease: ease);
+}
+
+#modal-bg-parent {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index:3000;
+	position:fixed;
+}
+
+#modal-bg {
+	background-color:#000;
+	opacity:0.7;
+	width:100%;
+	height:100%;
+}
+
+#featured-modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: auto;
+	z-index:3300;
+	overflow-y: scroll;
+
+	.modal-dialog {
+		position:relative;
+		top:165px;
+		left:0px;
+		padding-top:0px;
+		padding-bottom:0px;
+		.modal-content {
+			border:none;
+			border-radius:0px;
+			background-color:#eee;
+		}
+	}
+
 }
 
 /*Header*/
@@ -250,7 +373,7 @@ footer {
 
 .stories-btn {
 	position:relative;
-	z-index:2000;
+	z-index:1000;
 	height:15px;
 	background-color:#000000;
 	text-align:center;
@@ -416,6 +539,10 @@ HOME PAGE SPECIFIC STYLES
 		color:#fff;
 		font-size:2em;
 	}
+}
+
+.active-circle {
+	opacity:1 !important;
 }
 
 

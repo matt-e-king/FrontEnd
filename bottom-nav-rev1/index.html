@@ -55,9 +55,9 @@
 
 	</div>
 
-	<button type="button" class="homepage-circles btn btn-default hidden-xs" style="top:10%; left:25%; background-color:#6da3bf;"><i class="icon-camera"></i></button>
-	<button type="button" class="homepage-circles btn btn-default hidden-xs" style="top:65%; left:65%; background-color:#cc6600;"><i class="icon-facetime-video"></i></button>
-	<button type="button" class="homepage-circles btn btn-default hidden-xs" style="top:35%; left:10%; background-color:#a87d99;"><i class="icon-file-text"></i></button>
+	<button type="button" id="camera" class="homepage-circles btn btn-default hidden-xs"><i class="icon-camera"></i></button>
+	<button type="button" id="video" class="homepage-circles btn btn-default hidden-xs"><i class="icon-facetime-video"></i></button>
+	<button type="button" id="text" class="homepage-circles btn btn-default hidden-xs"><i class="icon-file-text"></i></button>
 
 	<footer>
 
@@ -237,13 +237,35 @@
 
 	</footer>
 
+	<div id="modal-bg-parent" class="fade">
+		<div id="modal-bg">
+			&nbsp;
+		</div>
+	</div>
+
+	<div id="featured-modal" class="fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+			<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h4 class="modal-title">Modal title</h4>
+			</div>
+			<div class="modal-body">
+				Lorem ipsum
+			</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div>
+
 	
 
-</body>
+	
 	<script type="text/javascript" src="assets/js/jquery.js"></script>
 	<script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="assets/js/html5shiv.js"></script>
 	<script type="text/javascript" src="assets/js/classie.js"></script>
 	<script type="text/javascript" src="assets/js/application.js"></script>
+</body>
+	
 
 </html>
