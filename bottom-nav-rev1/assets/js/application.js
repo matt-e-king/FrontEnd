@@ -1,9 +1,6 @@
 $(document).ready(function() {
 
-	/*var pageHeight = $(window).height();
-	var adjustedHeight = pageHeight * .70;
-
-	$('.stories-parent').height(adjustedHeight);*/
+	$(".nau-video").fitVids();
 
 	$('#stories-slider').carousel({
   		interval: false
