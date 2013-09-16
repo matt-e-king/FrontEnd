@@ -55,10 +55,6 @@
 
 	</div>
 
-	<button type="button" id="camera" class="homepage-circles btn btn-default hidden-xs"><i class="icon-camera"></i></button>
-	<button type="button" id="video" class="homepage-circles btn btn-default hidden-xs"><i class="icon-facetime-video"></i></button>
-	<button type="button" id="text" class="homepage-circles btn btn-default hidden-xs"><i class="icon-file-text"></i></button>
-
 	<footer>
 
 		<div class="opaque-section">&nbsp;</div>
@@ -237,13 +233,13 @@
 
 	</footer>
 
-	<div id="modal-bg-parent" class="fade">
+	<div id="modal-bg-parent" class="fade hidden-xs">
 		<div id="modal-bg">
 			&nbsp;
 		</div>
 	</div>
 
-	<div id="featured-modal" class="fade">
+	<div id="featured-modal" class="fade hidden-xs">
 		<div class="modal-dialog">
 			<div class="modal-content">
 			<div class="modal-header">
@@ -251,20 +247,117 @@
 			<h4 class="modal-title">Modal title</h4>
 			</div>
 			<div class="modal-body">
-				Lorem ipsum
+				
+				<div class="tab-content">
+					<div id="camera-tab" class="tab-pane fade active">
+
+						<div id="carousel-example-generic" class="carousel slide">
+							<!-- Indicators -->
+							<ol class="carousel-indicators">
+								<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+							</ol>
+
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner">
+
+								<div class="item active" style="text-align:center;">
+									<img src="http://placehold.it/900x500" />
+								</div>
+
+								<div class="item" style="text-align:center;">
+									<img src="http://placehold.it/900x500" />
+								</div>
+
+								<div class="item" style="text-align:center;">
+									<img src="http://placehold.it/900x500" />
+								</div>
+								
+							</div>
+
+							<!-- Controls -->
+							<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+								<i class="icon-chevron-left"></i>
+							</a>
+							<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+								<i class="icon-chevron-right"></i>
+							</a>
+						</div>
+
+
+					</div>
+					<div id="article-tab" class="tab-pane fade">
+
+							<div id="about-bg-picture" class="border-green" style="margin-bottom:25px;">
+								<img src="assets/img/about_img.jpg" alt="" class="img-responsive"/>
+							</div>
+							<h1 class="article-title">
+								STUDENTS COLLABORATE TO MAKE SOMETHING AMAZING...
+							</h1>
+
+							<hr class="green lg" />
+							<div class="row">
+								<div class="col-xs-6">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dui massa, pulvinar et tortor quis, elementum suscipit neque. Nullam eget risus eros. Pellentesque sollicitudin libero aliquet, consequat orci et, tempus tellus. Donec malesuada ullamcorper ligula, sed facilisis felis viverra quis. Sed eu dolor vestibulum, egestas ligula non, sagittis diam. Proin diam nisi, luctus non euismod vitae, sodales ut ipsum. Integer id justo at augue eleifend aliquam a at lectus. Duis malesuada egestas eros a feugiat. 
+								</div>
+								<div class="col-xs-6">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dui massa, pulvinar et tortor quis, elementum suscipit neque. Nullam eget risus eros. Pellentesque sollicitudin libero aliquet, consequat orci et, tempus tellus. Donec malesuada ullamcorper ligula, sed facilisis felis viverra quis. Sed eu dolor vestibulum, egestas ligula non, sagittis diam. Proin diam nisi, luctus non euismod vitae, sodales ut ipsum. Integer id justo at augue eleifend aliquam a at lectus. Duis malesuada egestas eros a feugiat. 
+								</div>
+							</div>
+
+					</div>
+					<div id="video-tab" class="tab-pane fade">
+						<div class="nau-video">
+							<iframe src="//player.vimeo.com/video/11392027" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+
 			</div>
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
 	</div>
 
 	
-
-	
 	<script type="text/javascript" src="assets/js/jquery.js"></script>
 	<script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/fitvids.js"></script>
 	<script type="text/javascript" src="assets/js/html5shiv.js"></script>
 	<script type="text/javascript" src="assets/js/classie.js"></script>
 	<script type="text/javascript" src="assets/js/application.js"></script>
+	<script type="text/javascript" src="assets/js/circle-animation.js"></script>
+
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+
+			var circleObjs = [
+				{
+					type : 'camera'
+					, x : '25%'
+					, y : '10%'
+					, icon : 'icon-camera'
+				},
+				{
+					type : 'article'
+					, x : '10%'
+					, y : '35%'
+					, icon : 'icon-file-text'
+				}, 
+				{
+					type : 'video'
+					, x : '65%'
+					, y : '65%'
+					, icon : 'icon-facetime-video'
+				}
+			];
+
+			var animationInstance = new homePageAnimation(circleObjs);
+
+		});	
+
+	</script>
 </body>
 	
 

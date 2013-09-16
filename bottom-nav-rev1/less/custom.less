@@ -149,7 +149,7 @@ h3 {
 
 /*Aniamtions*/
 
-.homepage-circles, .bottom-nav-add {
+.circle-hover, .bottom-nav-add {
 -webkit-transition: all 0.5s ease;
 -moz-transition: all 0.5s ease;
 transition: all 0.5s ease;
@@ -177,34 +177,46 @@ a,
 transition: all 0.2s ease;
 }
 
-@-webkit-keyframes text-circle {
+.layer-one {
+	z-index: 3000;
+}
+
+.layer-two {
+	z-index: 3300;
+}
+
+.layer-three {
+	z-index: 3500 !important;
+}
+
+@-webkit-keyframes article-circle {
   25% { width:150px; height:150px; font-size:6em; }
-  100% { left:43%; top:100px; width:60px; height:60px;}
+  100% { left:43%; top:10%; width:60px; height:60px;}
 }
 
 @-webkit-keyframes camera-circle {
   50% { width:5px; height:10px; font-size:.2em; }
-  100% { left:47.6%; top:100px; width:60px; height:60px;}
+  100% { left:47.6%; top:10%; width:60px; height:60px;}
 }
 
 @-webkit-keyframes video-circle {
   50% { width:30px; height:30px; font-size:1em; }
-  100% { left:52%; top:100px; width:60px; height:60px;}
+  100% { left:52%; top:10%; width:60px; height:60px;}
 }
 
-@keyframes text-circle {
+@keyframes article-circle {
   25% { width:150px; height:150px; font-size:6em; }
-  100% { left:43%; top:100px; width:60px; height:60px;}
+  100% { left:43%; top:10%; width:60px; height:60px;}
 }
 
 @keyframes camera-circle {
   50% { width:5px; height:10px; font-size:.2em; }
-  100% { left:47.6%; top:100px; width:60px; height:60px;}
+  100% { left:47.6%; top:10%; width:60px; height:60px;}
 }
 
 @keyframes video-circle {
   50% { width:30px; height:30px; font-size:1em; }
-  100% { left:52%; top:100px; width:60px; height:60px;}
+  100% { left:52%; top:10%; width:60px; height:60px;}
 }
 
 .animation-mixin (@name, @duration: 1s, @delay: 0s, @ease: ease) {
@@ -215,25 +227,17 @@ transition: all 0.2s ease;
 	animation:     	@name @duration @delay @ease normal forwards;
 }
 
-#text {
-	top:35%;
-	left:10%;
+
+#article {
 	background-color:#a87d99;
-	z-index:3500;
 }
 
 #camera {
-	top:10%;
-	left:25%;
 	background-color:#6da3bf;
-	z-index:3500;
 }
 
 #video {
-	top:65%;
-	left:65%;
 	background-color:#cc6600;
-	z-index:3500;
 }
 
 
@@ -241,8 +245,8 @@ transition: all 0.2s ease;
 	.animation-mixin(@name: camera-circle, @duration: 1s, @delay: 0s, @ease: ease);
 }
 
-.text-circle-animation {
-	.animation-mixin(@name: text-circle, @duration: 1s, @delay: 0s, @ease: ease);
+.article-circle-animation {
+	.animation-mixin(@name: article-circle, @duration: 1s, @delay: 0s, @ease: ease);
 }
 
 .video-circle-animation {
@@ -254,7 +258,6 @@ transition: all 0.2s ease;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	z-index:3000;
 	position:fixed;
 }
 
@@ -272,14 +275,13 @@ transition: all 0.2s ease;
 	bottom: 0;
 	left: 0;
 	overflow: auto;
-	z-index:3300;
-	overflow-y: scroll;
+	top:17%;
 
 	.modal-dialog {
 		position:relative;
-		top:165px;
 		left:0px;
 		padding-top:0px;
+		width:750px;
 		padding-bottom:0px;
 		.modal-content {
 			border:none;
@@ -355,6 +357,7 @@ footer {
 	width:100%;
 	color:@white;
 	bottom:25px;
+	.layer-one;
 }
 
 .opaque-section {
@@ -373,7 +376,6 @@ footer {
 
 .stories-btn {
 	position:relative;
-	z-index:1000;
 	height:15px;
 	background-color:#000000;
 	text-align:center;
@@ -532,6 +534,13 @@ HOME PAGE SPECIFIC STYLES
 	text-align:center;
 	color:#fff;
 	font-size:1.5em;
+	.layer-one;
+	&:hover {
+		color:#fff;
+	}
+}
+
+.circle-hover {
 	&:hover {
 		opacity:.9;
 		width:70px;
@@ -823,6 +832,14 @@ RESPONSIVE STYLES
 
 	}
 
+	#featured-modal {
+
+		.modal-dialog {
+			width:750px;
+		}
+
+	}
+
 
 
 }
@@ -888,6 +905,14 @@ RESPONSIVE STYLES
 		}
 	}
 
+	#featured-modal {
+
+		.modal-dialog {
+			width:950px;
+		}
+
+	}
+
 
 }
 
@@ -948,6 +973,14 @@ RESPONSIVE STYLES
 
 		.icon-chevron-right {
 			top: 39%;
+		}
+
+	}
+
+	#featured-modal {
+
+		.modal-dialog {
+			width:1050px;
 		}
 
 	}
