@@ -142,7 +142,7 @@ h3 {
 .img-hover {
 	opacity:0.8;
 	&:hover {
-		opacity:1.0;
+		opacity:1;
 	};
 }
 
@@ -172,9 +172,9 @@ a,
 .side-nav li a i,
 .three-column img,
 .related-bar img {
--webkit-transition: all 0.2s ease;
--moz-transition: all 0.2s ease;
-transition: all 0.2s ease;
+-webkit-transition: all 0.2s 0 ease;
+-moz-transition: all 0.2s 0 ease;
+transition: all 0.2s 0 ease;
 }
 
 .layer-one {
@@ -615,6 +615,7 @@ footer {
 #article-bg-picture {
 	max-height:500px;
 	overflow:hidden;
+	margin-top:70px;
 	.shadow();
 }
 
@@ -838,6 +839,14 @@ RESPONSIVE STYLES
 			width:750px;
 		}
 
+	}
+
+	#article-bg-picture {
+		margin-top:0px;
+	}
+
+	#about-bg-picture {
+		margin-top:0px;
 	}
 
 
