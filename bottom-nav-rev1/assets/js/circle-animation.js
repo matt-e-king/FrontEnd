@@ -16,7 +16,7 @@ homePageAnimation.prototype = {
 
 		//listeners
 		$('.homepage-circles').on('click', function() {
-			that.animate($(this)[0]);
+			//that.animate($(this)[0]);
 		});
 
 	}
