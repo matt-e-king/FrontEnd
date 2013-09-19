@@ -38,10 +38,15 @@ module.exports = function(grunt) {
      mcompile: {
       testFiles: {
         options: {
-            templateRoot: 'mustache/',
+            partialsRoot: 'mustache/partials/',
+            partialsArray: {
+              header : "header.mustache",
+              footer : "footer.mustache"
+            }
         },
         files: {
-            'dest/' : ['src/test.html'],
+            'dest/index.html' : ['mustache/pages/index.mustache'],
+            'dest/article.html' : ['mustache/pages/article.mustache'],
         },
       }
     },
