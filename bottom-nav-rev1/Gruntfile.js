@@ -35,6 +35,22 @@ module.exports = function(grunt) {
       }
     },
 
+     mcompile: {
+      testFiles: {
+        options: {
+            partialsRoot: 'mustache/partials/',
+            partialsArray: {
+              header : "header.mustache",
+              footer : "footer.mustache"
+            }
+        },
+        files: {
+            'dest/index.html' : ['mustache/pages/index.mustache'],
+            'dest/article.html' : ['mustache/pages/article.mustache'],
+        },
+      }
+    },
+
     concat: {
       options: {
         banner: '<%= banner %><%= jqueryCheck %>',
@@ -53,7 +69,12 @@ module.exports = function(grunt) {
           'js/popover.js',
           'js/scrollspy.js',
           'js/tab.js',
-          'js/affix.js'
+          'js/affix.js',
+          'js/fitvids.js',
+          'js/html5shiv.js',
+          'js/classie.js',
+          'js/application.js',
+          'js/circle-animation.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       },
@@ -178,6 +199,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-recess');
   grunt.loadNpmTasks('browserstack-runner');
+  grunt.loadNpmTasks('grunt-mcompile');
 
   // Docs HTML validation task
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
@@ -201,6 +223,7 @@ module.exports = function(grunt) {
 
   // CSS distribution task.
   grunt.registerTask('dist-css', ['recess']);
+  grunt.registerTask('mc', ['mcompile']);
 
   // Fonts distribution task.
   grunt.registerTask('dist-fonts', ['copy']);
