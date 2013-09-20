@@ -73,19 +73,15 @@ h1 {
 }
 
 h1.article-title {
-	margin-left:-15px;
-	margin-right:-15px;
-	padding:15px 15px;
-	color:#fff;
+	margin-top:5px;
+	margin-bottom:10px;
+	margin-left:0px;
+	margin-right:0px;
+	padding:0px 0px;
+	color:#3e3e3e;
+	.white-shadow;
 }
 
-.article-title.about {
-	background-color:@nau-blue;
-}
-
-.article-title.article {
-	background-color: @nau-sage;
-}
 
 h2 {
 	margin-top:10px;
@@ -127,8 +123,8 @@ h4 {
 	color:#fff;
 
 	h1 {
-		font-size:6em;
-		letter-spacing: -8px;
+		font-size:4em;
+		letter-spacing: -2px;
 		.univers-font;
 		text-shadow: 1px 1px 10px #333;
 
@@ -136,7 +132,7 @@ h4 {
 
 	p {
 		.egyptian-font;
-		font-size:2em;	
+		font-size:1.25em;	
 		font-weight:normal;
 		line-height:1em;
 		text-shadow: 1px 1px 10px #333;
@@ -147,7 +143,7 @@ h4 {
 	position:absolute;
 	text-align:left;
 	width:100%;
-	top:10%;
+	top:0%;
 
 	img {
 		position:absolute;
@@ -156,7 +152,7 @@ h4 {
 	}
 
 	h1 {
-		font-size:4em;
+		font-size:3.25em;
 		letter-spacing:-4px;
 	}
 }
@@ -266,7 +262,13 @@ transition: all 0.2s 0 ease;
 }
 
 
-.featured {
+.mobile-nav {
+	position:relative;
+	width:100%;
+	z-index:2000;
+}
+
+.mobile {
 	color:#fff;
 	i {
 		width:40px;
@@ -274,7 +276,7 @@ transition: all 0.2s 0 ease;
 	}
 }
 
-.featured.more-stories {
+.mobile.more-stories {
 	background-color:@light-grey;
 }
 
@@ -358,6 +360,8 @@ transition: all 0.2s 0 ease;
 header {
 	position:relative;
 	.menu-btn {
+		text-align:right;
+		padding-right:23px;
 		width:100%;
 		height:70px;
 		font-size:2.25em;
@@ -367,6 +371,8 @@ header {
 	}
 
 	.menu-collapse {
+		position:absolute;
+		width:100%;
 		text-align:center;
 		font-size:1.25em;
 		background-color:@nau-blue;
@@ -379,16 +385,12 @@ header {
 /*Side nav*/
 
 .side-nav-parent {
-	padding-top:10px;
-	padding-bottom:10px;
+	padding-top:20px;
+	padding-bottom:15px;
 	margin:0px 0px;
 }
 
-.side-nav-parent.article {
-	background-color:@nau-sage;
-}
-
-.side-nav-parent.about {
+.side-nav-parent {
 	background-color:@nau-blue;
 }
 
@@ -530,7 +532,7 @@ footer {
 	> li {
 		> a {
 			color:@white;
-			padding:3px 20px 3px 0px;
+			padding:3px 0px 3px 0px;
 			&:hover,
   			&:focus {
   				.dark-white-hover;
@@ -576,14 +578,15 @@ HOME PAGE SPECIFIC STYLES
 .title-container.homepage {
 	position:absolute;
 	text-align:right;
-	right:8%;
-	top:5%;
+	right:5%;
+	top:1%;
 
 	img {
 		position:absolute;
 		text-align:right;
-		top:140%;
+		top:100%;
 		right:0%;
+		width:100px;
 	}
 }
 
@@ -644,13 +647,14 @@ ARTICLE PAGE SPECIFIC STYLES
 
 .left-content.homepage {
 	margin-top:15px;
+	margin-bottom:15px;
 }
 
 
 
 #main {
-	margin-top:0px;
-	margin-bottom:0px;
+		margin-top:10px;
+		margin-bottom:0px;
 }
 
 
@@ -658,11 +662,11 @@ ARTICLE PAGE SPECIFIC STYLES
 	position:absolute;
 	text-align:right;
 	width:100%;
-	top:5%;
+	top:0%;
 
 	img {
 		position:relative;
-		bottom:0px;
+		bottom:5px;
 		width:100px;
 	}
 }
@@ -694,7 +698,6 @@ footer {
 #article-bg-picture {
 	max-height:500px;
 	overflow:hidden;
-	margin-top:70px;
 }
 
 #about-bg-picture {
@@ -723,8 +726,9 @@ footer {
 	font-size:1.1em;
 	h3 {
 		text-transform: uppercase;
-		font-size:1.5em;
-		margin-top:5px;
+		font-size:1.9em;
+		margin-top:10px;
+		margin-bottom:10px;
 		font-weight:bold;
 		a {
 			color:@nau-blue;	
@@ -802,13 +806,63 @@ RESPONSIVE STYLES
 	//.title-container is inherited from the main styles above
 	//.title-container for about pages is inherited from main .title-container class
 
-	#main {
-		padding-bottom:150px;
+	.title-container {
+		color:#fff;
+
+		h1 {
+			font-size:6em;
+			letter-spacing: -8px;
+			.univers-font;
+			text-shadow: 1px 1px 10px #333;
+
+		}
+
+		p {
+			.egyptian-font;
+			font-size:2em;	
+			font-weight:normal;
+			line-height:1em;
+			text-shadow: 1px 1px 10px #333;
+		}
+	}
+
+	.title-container.homepage {
+		position:absolute;
+		text-align:right;
+		right:8%;
+		top:5%;
+
+		img {
+			position:absolute;
+			text-align:right;
+			top:140%;
+			right:0%;
+			width:175px;
+		}
+	}
+
+	.left-content-cta {
+		h3 {
+			margin-top:5px;
+			margin-bottom:10px;
+		}
+	}
+
+	.category-nav {
+		> li {
+			> a {
+				padding:3px 50px 3px 0px;
+			}
+		}
 	}
 
 	#main {
 		margin-top:25px;
-		margin-bottom:75px;
+		margin-bottom:25px;
+	}
+
+	#main {
+		padding-bottom:150px;
 	}
 
 	.left-content {
@@ -850,11 +904,9 @@ RESPONSIVE STYLES
 		.white-shadow;
 	}
 
-	.article-title.article, .article-title.about {
-		background-color: transparent;
-	}
 
 	.title-container.article {
+		top:5%;
 
 		img {
 			position:relative;
@@ -865,12 +917,17 @@ RESPONSIVE STYLES
 	}
 
 	.title-container.about {
+		top:10%;
 
 		img {
 			position:absolute;
 			right:0%;
 			top:15%;
 			width:175px;
+		}
+
+		h1 {
+			font-size:4em;
 		}
 
 	}
@@ -888,6 +945,8 @@ RESPONSIVE STYLES
 	}
 
 	.side-nav-parent {
+		padding-top:10px;
+		padding-bottom:10px;
 		margin:0px 0px;
 	}
 
