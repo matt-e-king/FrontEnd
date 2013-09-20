@@ -2,13 +2,28 @@
 
 	<header>
 
-		<div class="mobile-nav visible-xs navbar-fixed-top">
+		<div id="article-bg-picture" class="border-green">
+			<img src="{{ArticleImage.Src}}" alt="" class="img-responsive"/>
+		</div>
+	
+		<div class="title-container article">
+
+			<div class="container" style="position:relative;">
+
+					<h1>only at NAU</h1>
+
+					<img src="assets/img/nau-campaign-logo.png" alt="" title=""/>
+
+			</div>
+
+		</div>
+
+		<div class="mobile-nav visible-xs">
 
 			<button type="button" data-toggle="collapse" data-target=".menu-collapse" class="menu-btn btn btn-primary">
 
 				<span class="sr-only">Toggle navigation</span>
 		  		<span class="glyphicon glyphicon-th-list"></span>
-				only at NAU
 					
 			</button>
 
@@ -18,27 +33,9 @@
 
 					<li><a href="category.html">SHARE YOUR STORY <i class="icon-chevron-right" style="color:#6da3bf;"></i></a></li>
 					<li><a href="category.html">VOLUNTEER <i class="icon-chevron-right" style="color:#ef9616;"></i></a></li>
-					<li><a href="category.html">ATTEND AN EVENT <i class="icon-chevron-right" style="color:#a87d99;"></i></a></li>
 					<li><a href="about.html" style="padding-right:0px">ABOUT THE CAMPAIGN <i class="icon-chevron-right" style="color:#fff;"></i></a></li>
 
 				</ul>
-
-			</div>
-
-		</div>
-
-
-		<div id="article-bg-picture" class="border-green">
-			<img src="{{ArticleImage.Src}}" alt="" class="img-responsive"/>
-		</div>
-	
-		<div class="title-container article">
-
-			<div class="container" style="position:relative;">
-
-					<h1 class="hidden-xs">only at NAU</h1>
-
-					<img src="assets/img/nau-campaign-logo.png" alt="" title=""/>
 
 			</div>
 
@@ -55,7 +52,7 @@
 				{{LongTitle}}
 			</h1>
 
-			<hr class="green lg hidden-xs" />
+			<hr class="green lg" />
 
 			<p class="overview">
 				{{{Summary}}}
@@ -83,7 +80,7 @@
 							</a>
 
 						</h3>
-						<p>
+						<p class="hidden-xs">
 							{{{MainContent}}}							
 						</p>
 					</div>
@@ -98,7 +95,6 @@
 						<nav class="side-nav article nav nav-stacked">
 							<li><a href="#"><div><i class="icon-comment"></i>&nbsp;</div>SHARE YOUR STORY</a></li>
 							<li><a href="#"><div><i class="icon-user"></i></div>VOLUNTEER</a></li>
-							<li><a href="#"><div><i class="icon-calendar"></i></div>ATTEND AN EVENT</a></li>
 							<li><a href="#"><div><i class="icon-heart"></i></div>GIVE</a></li>
 						</nav>
 

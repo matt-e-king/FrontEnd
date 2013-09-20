@@ -2,13 +2,28 @@
 
 	<header>
 
-		<div class="mobile-nav visible-xs navbar-fixed-top">
+		<div id="about-bg-picture" class="border-blue">
+			<img src="{{ArticleImage.Src}}" alt="" class="img-responsive"/>
+		</div>
+	
+		<div class="title-container about">
+
+			<div class="container" style="position:relative;">
+
+					<h1>About the Campaign for NAU</h1>
+
+					<img src="assets/img/nau-campaign-logo.png" alt="" title="" class="hidden-xs"/>
+
+			</div>
+
+		</div>
+
+		<div class="mobile-nav visible-xs">
 
 			<button type="button" data-toggle="collapse" data-target=".menu-collapse" class="menu-btn btn btn-primary">
 
 				<span class="sr-only">Toggle navigation</span>
 		  		<span class="glyphicon glyphicon-th-list"></span>
-				only at NAU
 					
 			</button>
 
@@ -18,7 +33,6 @@
 
 					<li><a href="category.html">SHARE YOUR STORY <i class="icon-chevron-right" style="color:#6da3bf;"></i></a></li>
 					<li><a href="category.html">VOLUNTEER <i class="icon-chevron-right" style="color:#ef9616;"></i></a></li>
-					<li><a href="category.html">ATTEND AN EVENT <i class="icon-chevron-right" style="color:#a87d99;"></i></a></li>
 					<li><a href="about.html" style="padding-right:0px">ABOUT THE CAMPAIGN <i class="icon-chevron-right" style="color:#fff;"></i></a></li>
 
 				</ul>
@@ -27,22 +41,6 @@
 
 		</div>
 
-
-		<div id="about-bg-picture" class="border-blue">
-			<img src="{{ArticleImage.Src}}" alt="" class="img-responsive"/>
-		</div>
-	
-		<div class="title-container about">
-
-			<div class="container" style="position:relative;">
-
-					<h1 class="hidden-xs">about NAU Campaign</h1>
-
-					<img src="assets/img/nau-campaign-logo.png" alt="" title=""/>
-
-			</div>
-
-		</div>
 
 	</header>
 
@@ -59,7 +57,7 @@
 						{{LongTitle}}
 					</h1>
 
-					<hr class="blue lg hidden-xs" />
+					<hr class="blue lg" />
 
 					<div class="left-content-content">
 						{{{MainContent}}}
