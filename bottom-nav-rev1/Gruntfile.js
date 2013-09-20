@@ -40,8 +40,9 @@ module.exports = function(grunt) {
         options: {
             partialsRoot: 'mustache/partials/',
             partialsArray: {
-              Header : "header.mustache",
-              Footer : "footer.mustache"
+              header : "header.mustache",
+              footer : "footer.mustache",
+              bottomnav : "bottomnav.mustache"
             }
         },
         files: {
