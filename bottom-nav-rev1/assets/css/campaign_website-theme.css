@@ -51,6 +51,11 @@
   background-color: #003466;
 }
 
+.btn-warning {
+  border: 1px solid transparent;
+  border-radius: 0;
+}
+
 .breadcrumb {
   padding: 0 0px;
   margin-top: 14px;
