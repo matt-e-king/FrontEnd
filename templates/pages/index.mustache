@@ -1,0 +1,213 @@
+{{> header}}
+
+	<header>
+
+		<div class="title-container homepage visible-xs">
+
+			<h1>only at NAU</h1>
+			<p>The pines and peaks of Northern Arizona<br />inspire ground-breaking research<br />and a passion for the outdoors</p>
+
+			<img src="{{BaseURL}}assets/img/nau-campaign-logo.png" alt="" title="" />
+
+		</div>
+
+		<img src="{{BaseURL}}assets/img/old_main.jpg" alt="" title="" class="img-responsive visible-xs"/>
+
+		<div class="mobile-nav homepage visible-xs">
+
+			<button type="button" data-toggle="collapse" data-target=".menu-collapse" class="menu-btn btn btn-primary">
+
+				<span class="sr-only">Toggle navigation</span>
+		  		<span class="glyphicon glyphicon-th-list"></span>
+					
+			</button>
+
+			<div class="collapse menu-collapse">
+
+				<ul class="category-nav nav nav-stacked">
+
+					<li><a href="category.html">SHARE YOUR STORY <i class="icon-chevron-right" style="color:#6da3bf;"></i></a></li>
+					<li><a href="category.html">VOLUNTEER <i class="icon-chevron-right" style="color:#ef9616;"></i></a></li>
+					<li><a href="about.html" style="padding-right:0px">ABOUT THE CAMPAIGN <i class="icon-chevron-right" style="color:#fff;"></i></a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+
+	</header>
+
+	<div id="bg-picture" class="hidden-xs">
+
+		<div class="title-container homepage">
+
+			<h1>only at NAU</h1>
+			<p>The pines and peaks of Northern Arizona<br />inspire ground-breaking research<br />and a passion for the outdoors</p>
+
+			<img src="{{BaseURL}}assets/img/nau-campaign-logo.png" alt="" title="" />
+
+		</div>
+
+	</div>
+
+	<section id="main" class="homepage visible-xs">
+
+		<div class="container left-content homepage">
+
+			<div class="row">
+				<div class="col-xs-12">
+
+					<h1 class="article-title about">
+						{{LongTitle}}
+					</h1>
+
+					<hr class="blue lg" />
+
+					{{{MainContent}}}
+				</div>
+			</div>
+
+			<div class="row"><div class="col-xs-12">
+				{{#FeaturedGallery}}
+					<div class="img-container">
+						<img src="{{SmallThumbnail.Src}}" alt="{{SmallThumbnail.Alt}}" />
+					</div>
+				{{/FeaturedGallery}}
+			</div></div>
+
+			<div style="padding:5px;"></div>
+
+			<div class="row"><div class="col-xs-12">
+				<div class="nau-video">
+					<iframe src="{{FeaturedVideo}}" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				</div>
+			</div></div>
+
+		</div>
+
+
+	</section>
+
+{{> bottomnav}}
+
+<div id="modal-bg-parent" class="fade hidden-xs">
+		<div id="modal-bg">
+			&nbsp;
+		</div>
+	</div>
+
+	<div id="featured-modal" class="fade hidden-xs">
+		<div class="modal-dialog">
+			<div class="modal-content">
+			<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h4 class="modal-title">Modal title</h4>
+			</div>
+			<div class="modal-body">
+				
+				<div class="tab-content">
+					<div id="camera-tab" class="tab-pane fade active">
+
+						<div id="carousel-example-generic" class="carousel slide">
+							<!-- Indicators -->
+							<ol class="carousel-indicators">
+								<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+							</ol>
+
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner">
+
+								<div class="item active" style="text-align:center;">
+									<img src="http://placehold.it/900x500" />
+								</div>
+
+								<div class="item" style="text-align:center;">
+									<img src="http://placehold.it/900x500" />
+								</div>
+
+								<div class="item" style="text-align:center;">
+									<img src="http://placehold.it/900x500" />
+								</div>
+								
+							</div>
+
+							<!-- Controls -->
+							<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+								<i class="icon-chevron-left"></i>
+							</a>
+							<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+								<i class="icon-chevron-right"></i>
+							</a>
+						</div>
+
+
+					</div>
+					<div id="article-tab" class="tab-pane fade">
+
+							<div id="about-bg-picture" class="border-blue" style="margin-bottom:25px;">
+								<img src="{{BaseURL}}assets/img/about_img.jpg" alt="" class="img-responsive"/>
+							</div>
+
+							<div class="row">
+								<div class="col-xs-12">
+
+									<h1 class="article-title about">
+										{{LongTitle}}
+									</h1>
+
+									<hr class="blue lg" />
+
+									{{{MainContent}}}
+								</div>
+							</div>
+
+					</div>
+					<div id="video-tab" class="tab-pane fade">
+						<div class="nau-video">
+							<iframe src="{{FeaturedVideo}}" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div>
+
+
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+
+			var circleObjs = [
+					{
+						type : 'camera'
+						, x : '25%'
+						, y : '10%'
+						, icon : 'icon-camera'
+					},
+					{
+						type : 'article'
+						, x : '10%'
+						, y : '35%'
+						, icon : 'icon-file-text'
+					}, 
+					{
+						type : 'video'
+						, x : '65%'
+						, y : '65%'
+						, icon : 'icon-facetime-video'
+					}
+				];
+
+			var animationInstance = new homePageAnimation(circleObjs);
+		});
+
+	</script>
+
+
+{{> footer}}
