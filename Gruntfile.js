@@ -35,6 +35,25 @@ module.exports = function(grunt) {
       }
     },
 
+     mcompile: {
+      testFiles: {
+        options: {
+            partialsRoot: 'mustache/partials/',
+            partialsArray: {
+              header : "header.mustache",
+              footer : "footer.mustache",
+              bottomnav : "bottomnav.mustache"
+            }
+        },
+        files: {
+            'article.html' : ['templates/pages/article.mustache'],
+            'about.html' : ['templates/pages/about.mustache'],
+            'index.html' : ['templates/pages/index.mustache'],
+
+        },
+      }
+    },
+
     concat: {
       options: {
         banner: '<%= banner %><%= jqueryCheck %>',
@@ -53,16 +72,21 @@ module.exports = function(grunt) {
           'js/popover.js',
           'js/scrollspy.js',
           'js/tab.js',
-          'js/affix.js'
+          'js/affix.js',
+          'js/fitvids.js',
+          'js/html5shiv.js',
+          'js/classie.js',
+          'js/application.js',
+          'js/circle-animation.js'
         ],
-        dest: 'dist/js/<%= pkg.name %>.js'
+        dest: 'assets/js/<%= pkg.name %>.js'
       },
       styles: {
         src: [
-          'dist/css/bootstrap.min.css',
-          'dist/css/custom.min.css'
+          'assets/css/bootstrap.min.css',
+          'assets/css/custom.min.css'
         ],
-        dest: 'dist/css/styles.css'
+        dest: 'assets/css/styles.css'
       }
     },
 
@@ -72,7 +96,7 @@ module.exports = function(grunt) {
       },
       bootstrap: {
         src: ['<%= concat.bootstrap.dest %>'],
-        dest: 'dist/js/<%= pkg.name %>.min.js'
+        dest: 'assets/js/<%= pkg.name %>.min.js'
       }
     },
 
@@ -82,32 +106,32 @@ module.exports = function(grunt) {
       },
       bootstrap: {
         src: ['less/bootstrap.less'],
-        dest: 'dist/css/bootstrap.css'
+        dest: 'assets/css/bootstrap.css'
       },
       min: {
         options: {
           compress: true
         },
         src: ['less/bootstrap.less'],
-        dest: 'dist/css/bootstrap.min.css'
+        dest: 'assets/css/bootstrap.min.css'
       },
       theme: {
         src: ['less/theme.less'],
-        dest: 'dist/css/<%= pkg.name %>-theme.css'
+        dest: 'assets/css/<%= pkg.name %>-theme.css'
       },
       theme_min: {
         options: {
           compress: true
         },
         src: ['less/theme.less'],
-        dest: 'dist/css/<%= pkg.name %>-theme.min.css'
+        dest: 'assets/css/<%= pkg.name %>-theme.min.css'
       },
       custom_styles: {
         options: {
           compress: true
         },
         src: ['less/custom.less'],
-        dest: 'dist/css/custom.min.css'
+        dest: 'assets/css/custom.min.css'
       }
     },
 
@@ -115,7 +139,7 @@ module.exports = function(grunt) {
       fonts: {
         expand: true,
         src: ["fonts/*"],
-        dest: 'dist/'
+        dest: 'assets/'
       }
     },
 
@@ -178,6 +202,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-recess');
   grunt.loadNpmTasks('browserstack-runner');
+  grunt.loadNpmTasks('grunt-mcompile');
 
   // Docs HTML validation task
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
@@ -201,6 +226,7 @@ module.exports = function(grunt) {
 
   // CSS distribution task.
   grunt.registerTask('dist-css', ['recess']);
+  grunt.registerTask('mc', ['mcompile']);
 
   // Fonts distribution task.
   grunt.registerTask('dist-fonts', ['copy']);
