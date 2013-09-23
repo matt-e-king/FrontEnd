@@ -46,9 +46,9 @@ module.exports = function(grunt) {
             }
         },
         files: {
-            'article.html' : ['mustache/pages/article.mustache'],
-            'about.html' : ['mustache/pages/about.mustache'],
-            'index.html' : ['mustache/pages/index.mustache'],
+            'article.html' : ['templates/pages/article.mustache'],
+            'about.html' : ['templates/pages/about.mustache'],
+            'index.html' : ['templates/pages/index.mustache'],
 
         },
       }
