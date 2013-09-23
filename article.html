@@ -1,89 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Campaign Website</title>
+	<title>Campaign Website | Page Title</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="dist/css/styles.css">
-	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="//cmsassets.nau.edu/campaign-website/live/assets/css/styles.css">
+
+	<script src="//cmsassets.nau.edu/campaign-website/live/assets/js/jquery.js"></script>
+	<script src="//cmsassets.nau.edu/campaign-website/live/assets/js/campaign_website.min.js"></script>
 
 </head>
 <body>
-
 	<header>
 
-		<button type="button" class="menu-btn btn btn-primary pull-left hidden-xs">
+		<div id="article-bg-picture" class="border-green">
+			<img src="assets&#x2F;img&#x2F;article_img.jpg" alt="" class="img-responsive"/>
+		</div>
+	
+		<div class="title-container article">
 
-			<span class="sr-only">Toggle navigation</span>
-      		<span class="glyphicon glyphicon-th-list" style="margin-left:10px;"></span>
-			menu
-			
+			<div class="container" style="position:relative;">
 
-		</button>
+					<h1>only at NAU</h1>
 
-		<button type="button" class="menu-btn btn btn-primary visible-xs">
+					<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/nau-campaign-logo.png" alt="" title=""/>
 
-			<span class="sr-only">Toggle navigation</span>
-      		<span class="glyphicon glyphicon-th-list"></span>
-			only at NAU
-			
+			</div>
 
-		</button>
-
-		<div class="feed-bar well well-sm hidden-xs">
-			<strong>Feed:</strong> Lorem ipsum something else and more words for you...
 		</div>
 
-		<!--<nav class="left-nav">
+		<div class="mobile-nav visible-xs">
 
-			<ul class="nav nav-stacked">
-				<li><a href="">HOME</a></li>
-				<li><a href="">STUDENT EXPERIEINCES</a></li>
-				<li><a href="">ACADEMICS & RESEARCH</a></li>
-				<li><a href="">SUSTAINABILITY</a></li>
-				<li><a href="">NATIVE AMERICAN STUDENTS</a></li>
-				<li><a href="">WORKFORCE DEVELOPMENT</a></li>
-				<li><a href="">EVENTS</a></li>
-				
-			</ul>
+			<button type="button" data-toggle="collapse" data-target=".menu-collapse" class="menu-btn btn btn-primary">
 
-		</nav>-->
+				<span class="sr-only">Toggle navigation</span>
+		  		<span class="glyphicon glyphicon-th-list"></span>
+					
+			</button>
+
+			<div class="collapse menu-collapse">
+
+				<ul class="category-nav nav nav-stacked">
+
+					<li><a href="category.html">SHARE YOUR STORY <i class="icon-chevron-right" style="color:#6da3bf;"></i></a></li>
+					<li><a href="category.html">VOLUNTEER <i class="icon-chevron-right" style="color:#ef9616;"></i></a></li>
+					<li><a href="about.html" style="padding-right:0px">ABOUT THE CAMPAIGN <i class="icon-chevron-right" style="color:#fff;"></i></a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
 
 	</header>
 
-	<div id="article-bg-picture">
-		<img src="assets/img/article_img.jpg" alt="" class="img-responsive"/>
-	</div>
-		<div class="only-nau hidden-xs">
-			<h1>only at NAU</h1>
-		</div>
 
-		<!--<div class="stories">
-			<div class="stories-btn">
-				<button type="button" class="btn btn-default">stories</button>
-			</div>
-			<div style="padding:5px; background-color:#fff; width:100%"></div>
+	<section id="main" class="container">
 
-		</div>-->
-
-
-	<section id="body-content" class="container">
-		<div class="social">
-			<i class="icon-twitter"></i>
-			<i class="icon-facebook"></i>
-			<i class="icon-google-plus"></i>
-			<i class="icon-youtube-play"></i>
-		</div>
-		<ol class="breadcrumb">
-			<li><a href="#">CATEGORIES</a></li>
-			<li><a href="category.html">STUDENT EXPERIENCE</a></li>
-			<li CLASS="active">ARTICLE</li>
-		</ol>
+		<button type="button" class="btn btn-warning share-btn"><i class="icon-share"></i>&nbsp;Share</button>
 
 		<article>
 
-			<h2 class="article-title">
-				STUDENTS COLLABORATE TO MAKE SOMETHING AMAZING...
-			</h2>
+			<h1 class="article-title article">
+				LOREM IPSUM DOLOR SIT AMET
+			</h1>
 
 			<hr class="green lg" />
 
@@ -93,121 +72,292 @@
 
 			<hr class="green lg" />
 
-			<div class="two-col-content row">
+			<section class="two-col-content row">
 
-				<div class="content col-xs-12 col-md-9">
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisis mi a neque pretium, a posuere sapien convallis. Ut sed commodo mi. Nullam posuere urna mauris, sed vestibulum tortor tincidunt quis. Praesent molestie massa quis ullamcorper auctor. Sed dignissim erat ut quam sagittis, at malesuada dui porta. Pellentesque molestie ante quis nisl gravida, sit amet semper nibh fermentum. Phasellus mattis risus nec ligula dapibus viverra. Morbi hendrerit a erat tincidunt bibendum.
-					</p>
-					<p>	
-						Mauris quis mollis sem. Sed vitae magna est. Proin consectetur nec nunc vitae vestibulum. Vestibulum commodo orci eget diam sagittis, ut mattis nisi rhoncus. In pharetra leo nec cursus dignissim. Curabitur ut porttitor nulla. Cras tristique elementum magna eget vulputate. Cras laoreet, sem ut feugiat rhoncus, nisi justo convallis sem, in euismod est metus non turpis. Maecenas tincidunt magna malesuada augue facilisis sollicitudin. Quisque blandit nibh in elit convallis, sodales ornare orci sagittis. Donec at ante et sapien semper tincidunt. Proin mollis posuere ante vel euismod. Aliquam vitae aliquam nunc, dapibus ornare leo. Nulla vel sodales lacus, et facilisis purus.
-					</p>
-					<p>	
-						Aliquam erat volutpat. Suspendisse id iaculis augue. Nulla dictum eros sit amet vehicula lacinia. Proin vitae odio nec risus lobortis vestibulum ac et lorem. Etiam auctor arcu in sem porta varius. Sed tincidunt erat vel lacus eleifend, eget congue diam pulvinar. Sed vitae erat dapibus nisi lobortis tincidunt. Proin non mauris ante. Quisque consectetur at mi vel auctor. Integer mollis, mauris eget feugiat auctor, orci felis convallis mauris, sit amet volutpat mi sem sit amet nunc.
-					</p>
+				<div class="left-content col-xs-12 col-sm-9">
 
-					<hr class="green lg" />
+					<div class="left-content-content">
+						<p>Lorem ipsum <a href=&quot;#&quot;>here is a link</a>, consectetur adipiscing elit. Aliquam facilisis mi a neque pretium, a posuere sapien convallis. Ut sed commodo mi. Nullam posuere urna mauris, sed vestibulum tortor tincidunt quis. Praesent molestie massa quis ullamcorper auctor. Sed dignissim erat ut quam sagittis, at malesuada dui porta. Pellentesque molestie ante quis nisl gravida, sit amet semper nibh fermentum. Phasellus mattis risus nec ligula dapibus viverra. Morbi hendrerit a erat tincidunt bibendum.</p><ul><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li><li>Lorem ipsum dolor sit amet, consectetur</li><li>Lorem ipsum dolor sit amet, consectetur adipiscing</li></ul><p>Mauris quis mollis sem. Sed vitae magna est. Proin consectetur nec nunc vitae vestibulum. Vestibulum commodo orci eget diam sagittis, ut mattis nisi rhoncus. In pharetra leo nec cursus dignissim. Curabitur ut porttitor nulla. Cras tristique elementum magna eget vulputate. Cras laoreet, sem ut feugiat rhoncus, nisi justo convallis sem, in euismod est metus non turpis. Maecenas tincidunt magna malesuada augue facilisis sollicitudin. Quisque blandit nibh in elit convallis, sodales ornare orci sagittis. Donec at ante et sapien semper tincidunt. Proin mollis posuere ante vel euismod. Aliquam vitae aliquam nunc, dapibus ornare leo. Nulla vel sodales lacus, et facilisis purus.</p><blockquote>&quot;Mauris quis mollis sem. Sed vitae magna est. Proin consectetur nec nunc vitae vestibulum. Vestibulum commodo orci eget diam sagittis, ut mattis nisi rhoncus.&quot;</blockquote><p>Aliquam erat volutpat. Suspendisse id iaculis augue. Nulla dictum eros sit amet vehicula lacinia. Proin vitae odio nec risus lobortis vestibulum ac et lorem. Etiam auctor arcu in sem porta varius. Sed tincidunt erat vel lacus eleifend, eget congue diam pulvinar. Sed vitae erat dapibus nisi lobortis tincidunt. Proin non mauris ante. Quisque consectetur at mi vel auctor. Integer mollis, mauris eget feugiat auctor, orci felis convallis mauris, sit amet volutpat mi sem sit amet nunc.</p>
+					</div>
 
-					<div class="cta well well-lg">
+					<hr class="green lg"/>
+
+					<div class="left-content-cta">
 						<h3>
 
-							<a href="#">
-							<span class="glyphicon glyphicon-play-circle"></span>
-							CTA Goes Here
-							<span class="badge pull-right">Learn More</span>
+							<a href="http:&#x2F;&#x2F;www.google.com">
+							CALL TO ACTION
+							<i class="icon-chevron-right"></i>
 							</a>
 
 						</h3>
-						<p>
+						<p class="hidden-xs">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisis mi a neque pretium, a posuere sapien convallis. Ut sed commodo mi. Nullam posuere urna mauris, sed vestibulum tortor tincidunt quis. Praesent molestie massa quis ullamcorper auctor.							
 						</p>
 					</div>
 
 				</div>
 
-				<div class="related-bar col-xs-12 col-md-3">
-					<!--<h3>Related Articles</h3>
-					<hr class="green sm" />-->
-					<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
-					<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
-					<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
-					<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
+				<div class="related-bar">
+
+					<div class="side-nav-parent article col-xs-12 col-sm-3">
+
+						<nav class="side-nav article nav nav-stacked">
+							<li><a href="#"><div><i class="icon-comment"></i>&nbsp;</div>SHARE YOUR STORY</a></li>
+							<li><a href="#"><div><i class="icon-user"></i></div>VOLUNTEER</a></li>
+							<li><a href="#"><div><i class="icon-heart"></i></div>GIVE</a></li>
+						</nav>
+
+					</div>
+
+					<div class="col-xs-12 col-sm-3 hidden-xs">
+
+							<div class="img-container">
+								<img src="assets&#x2F;img&#x2F;article2.jpg" alt="Short Title Article 1" />
+							</div>
+							<div class="img-container">
+								<img src="assets&#x2F;img&#x2F;article3.jpg" alt="Short Title for Article 2" />
+							</div>
+
+
+					</div>
+
 				</div>
 
-			</div>
-
-			
+			</section>
 
 
 		</article>
 
-		
-		
 
 	</section>
 
-	<footer class="inner-page">
+<footer>
 
-		<div class="stories">
-			
-			<div class="stories-btn">
-				<button type="button" class="btn btn-default" data-toggle="collapse" data-target=".stories-collapse">student life</button>
-				<div style="padding:5px; background-color:#fff; width:100%; z-index:1000; position:absolute; bottom:-10px"></div>
-			</div>
-			
-			<div class="white-bar"></div>
+		<div class="opaque-section hidden-xs">&nbsp;</div>
+		
 
-			<section class="stories-collapse collapse">
-				<div style="padding:5px; background-color:#fff; width:100%"></div>
-				<div class="four-column-content row">
-
-
-
-				<div class="col-xs-6 col-sm-3">
-					<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
-					<h4 class="short-article-title">Lorem Ipsum something else</h4>
-					<p>
-						Sub content for each article that will be a small description.
-					</p>
-				</div>
-
-				<div class="col-xs-6 col-sm-3">
-					<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
-					<h4 class="short-article-title">Lorem Ipsum something else</h4>
-					<p>
-						Sub content for each article that will be a small description, or excerpt, before the user clicks into the full article.
-					</p>
-				</div>
-
-				<div class="col-xs-6 col-sm-3">
-					<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
-					<h4 class="short-article-title">Lorem Ipsum something else</h4>
-					<p>
-						Sub content for each article that will be a small description, or excerpt, before the user clicks into the full article.
-					</p>
-				</div>
-
-				<div class="col-xs-6 col-sm-3">
-					<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
-					<h4 class="short-article-title">Lorem Ipsum something else</h4>
-					<p>
-						Sub content for each article that will be a small description, or excerpt, before the user clicks into the full article.
-					</p>
-				</div>
-
-			</div>
-			<div style="padding:5px; background-color:#fff; width:100%"></div>
-			</section>
+		<div class="stories-btn hidden-xs">
+			<button type="button" class="footer-btn btn btn-default" data-toggle="collapse" data-target=".stories-collapse"><i class="icon-chevron-up"></i></button>
 
 		</div>
 
+				
+		<div class="mobile more-stories container visible-xs">
+			<h2>MORE STORIES</h2>
+		</div>
 
-	</footer>
+		<section class="stories-collapse collapse">				
+
+			<div id="bottom-nav" class="bottom-nav hidden-xs">
+
+				<nav class="container">
+					<div class="row">
+					<div class="col-xs-12">
+
+						<ul class="category-nav nav navbar-nav navbar-left">
+
+							<li><a href="category.html">SHARE YOUR STORY <i class="icon-chevron-right" style="color:#6da3bf;"></i></a></li>
+							<li><a href="category.html">VOLUNTEER <i class="icon-chevron-right" style="color:#ef9616;"></i></a></li>
+
+						</ul>
+
+						<ul class="category-nav nav navbar-nav navbar-right">
+							<li><a href="about.html" style="padding-right:0px">ABOUT THE CAMPAIGN FOR NAU<i class="icon-chevron-right" style="color:#fff;"></i></a></li>
+						</ul>
+
+					</div>
+				</div>
+
+				</nav>
+
+			</div> 
+
+			<div class="stories-parent">
+
+				<div class="stories-container container">
 
 
-</body>
-	<script type="text/javascript" src="assets/js/jquery.js"></script>
-	<script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="assets/js/html5shiv.js"></script>
+					<div id="stories-slider" class="carousel slide">
+
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+
+
+							<div class="item active">
+
+								<div class="row three-column">
+
+									<div class="col-xs-6 col-sm-4">
+										<a href="article.html">
+											<div class="img-container">
+												<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/article1.jpg" alt="" />
+											</div>
+										</a>
+										<h4 class="short-article-title"><a href="article.html">Regular Article</a></h4>
+									</div>
+
+									<div class="col-xs-6 col-sm-4">
+										<a href="article.html">
+											<div class="img-container">
+												<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/article2.jpg" alt="" />
+											</div>
+										</a>
+										<h4 class="short-article-title"><a href="article-video.html">Video Article</a></h4>
+									</div>
+
+									<div class="col-xs-6 col-sm-4">
+										<a href="article.html">
+											<div class="img-container">
+												<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/article3.jpg" alt="" />
+											</div>
+										</a>
+										<h4 class="short-article-title">Short Title</h4>
+									</div>
+
+									<div class="col-xs-6 col-sm-4">
+										<a href="article.html">
+											<div class="img-container">
+												<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/article4.jpg" alt="" />
+											</div>
+										</a>
+										<h4 class="short-article-title"><a href="article.html">Regular Article</a></h4>
+									</div>
+
+									<div class="col-xs-6 col-sm-4">
+										<a href="article.html">
+											<div class="img-container">
+												<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/article5.jpg" alt="" />
+											</div>
+										</a>
+										<h4 class="short-article-title"><a href="article-video.html">Video Article</a></h4>
+									</div>
+
+									<div class="col-xs-6 col-sm-4">
+										<a href="article.html">
+											<div class="img-container">
+												<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/article6.jpg" alt="" />
+											</div>
+										</a>
+										<h4 class="short-article-title">Short Title</h4>
+									</div>
+
+								</div>						
+
+							</div>
+
+
+
+							<div class="item">
+
+								<div class="row three-column">
+
+									<div class="col-xs-6 col-sm-4">
+										<a href="article.html">
+											<div class="img-container">
+												<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/article1.jpg" alt="" />
+											</div>
+										</a>
+										<h4 class="short-article-title"><a href="article.html">Regular Article</a></h4>
+									</div>
+
+									<div class="col-xs-6 col-sm-4">
+										<a href="article.html">
+											<div class="img-container">
+												<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/article2.jpg" alt="" />
+											</div>
+										</a>
+										<h4 class="short-article-title"><a href="article-video.html">Video Article</a></h4>
+									</div>
+
+									<div class="col-xs-6 col-sm-4">
+										<a href="article.html">
+											<div class="img-container">
+												<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/article3.jpg" alt="" />
+											</div>
+										</a>
+										<h4 class="short-article-title">Short Title</h4>
+									</div>
+
+									<div class="col-xs-6 col-sm-4">
+										<a href="article.html">
+											<div class="img-container">
+												<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/article4.jpg" alt="" />
+											</div>
+										</a>
+										<h4 class="short-article-title"><a href="article.html">Regular Article</a></h4>
+									</div>
+
+									<div class="col-xs-6 col-sm-4">
+										<a href="article.html">
+											<div class="img-container">
+												<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/article5.jpg" alt="" />
+											</div>
+										</a>
+										<h4 class="short-article-title"><a href="article-video.html">Video Article</a></h4>
+									</div>
+
+									<div class="col-xs-6 col-sm-4">
+										<a href="article.html">
+											<div class="img-container">
+												<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/article6.jpg" alt="" />
+											</div>
+										</a>
+										<h4 class="short-article-title">Short Title</h4>
+									</div>
+
+								</div>	
+
+
+							</div>
+
+
+						</div>
+
+						<!-- Controls -->
+						<a class="left carousel-control" href="#stories-slider" data-slide="prev">
+							<i class="icon-chevron-left"></i>
+						</a>
+						<a class="right carousel-control" href="#stories-slider" data-slide="next">
+							<i class="icon-chevron-right"></i>
+						</a>
+					</div>
+
+
+			</div>
+
+			</div>
+
+			<div style="padding:10px">&nbsp;</div>
+
+
+		</section>
+
+		<div class="bottom-links fade">
+
+			<div class="container">
+
+				<div class="row">
+
+					<div class="social col-xs-6">
+
+						<i class="icon-twitter"></i>
+						<i class="icon-facebook"></i>
+						<i class="icon-google-plus"></i>
+						<i class="icon-youtube-play"></i>
+
+					</div>
+
+					<div class="admin-links col-xs-6">
+						<a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</footer></body>
 
 </html>

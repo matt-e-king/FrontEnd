@@ -1,123 +1,451 @@
 <!DOCTYPE html>
-<html lang="en" id="homepage">
+<html lang="en">
 <head>
-	<title>Campaign Website</title>
+	<title>Campaign Website | Page Title</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="dist/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="//cmsassets.nau.edu/campaign-website/live/assets/css/styles.css">
+
+	<script src="//cmsassets.nau.edu/campaign-website/live/assets/js/jquery.js"></script>
+	<script src="//cmsassets.nau.edu/campaign-website/live/assets/js/campaign_website.min.js"></script>
 
 </head>
 <body>
-
 	<header>
 
-		<button type="button" class="menu-btn btn btn-primary pull-left hidden-xs">
+		<div class="title-container homepage visible-xs">
 
-			<span class="sr-only">Toggle navigation</span>
-      		<span class="glyphicon glyphicon-th-list" style="margin-left:10px;"></span>
-			menu
-			
+			<h1>only at NAU</h1>
+			<p>The pines and peaks of Northern Arizona<br />inspire ground-breaking research<br />and a passion for the outdoors</p>
 
-		</button>
+			<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/nau-campaign-logo.png" alt="" title="" />
 
-		<button type="button" class="menu-btn btn btn-primary visible-xs">
-
-			<span class="sr-only">Toggle navigation</span>
-      		<span class="glyphicon glyphicon-th-list"></span>
-			only at NAU
-			
-
-		</button>
-
-		<div class="feed-bar well well-sm hidden-xs">
-			<strong>Feed:</strong> Lorem ipsum something else and more words for you...
 		</div>
 
-		<nav class="left-nav hidden-xs">
+		<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/old_main.jpg" alt="" title="" class="img-responsive visible-xs"/>
 
-			<ul class="nav nav-stacked">
-				<li><a href="">HOME</a></li>
-				<li><a href="">STUDENT EXPERIEINCES</a></li>
-				<li><a href="">ACADEMICS & RESEARCH</a></li>
-				<li><a href="">SUSTAINABILITY</a></li>
-				<li><a href="">NATIVE AMERICAN STUDENTS</a></li>
-				<li><a href="">WORKFORCE DEVELOPMENT</a></li>
-				<li><a href="">EVENTS</a></li>
-				
-			</ul>
+		<div class="mobile-nav homepage visible-xs">
 
-		</nav>
+			<button type="button" data-toggle="collapse" data-target=".menu-collapse" class="menu-btn btn btn-primary">
+
+				<span class="sr-only">Toggle navigation</span>
+		  		<span class="glyphicon glyphicon-th-list"></span>
+					
+			</button>
+
+			<div class="collapse menu-collapse">
+
+				<ul class="category-nav nav nav-stacked">
+
+					<li><a href="category.html">SHARE YOUR STORY <i class="icon-chevron-right" style="color:#6da3bf;"></i></a></li>
+					<li><a href="category.html">VOLUNTEER <i class="icon-chevron-right" style="color:#ef9616;"></i></a></li>
+					<li><a href="about.html" style="padding-right:0px">ABOUT THE CAMPAIGN <i class="icon-chevron-right" style="color:#fff;"></i></a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
 
 	</header>
 
-	<div id="bg-picture">
+	<div id="bg-picture" class="hidden-xs">
 
-		<div class="only-nau hidden-xs">
+		<div class="title-container homepage">
+
 			<h1>only at NAU</h1>
+			<p>The pines and peaks of Northern Arizona<br />inspire ground-breaking research<br />and a passion for the outdoors</p>
+
+			<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/nau-campaign-logo.png" alt="" title="" />
+
 		</div>
 
 	</div>
 
-	<footer>
+	<section id="main" class="homepage visible-xs">
 
-		<div class="stories">
-			
-			<div class="stories-btn">
-				<button type="button" class="btn btn-default" data-toggle="collapse" data-target=".stories-collapse">student life</button>
-				<div style="padding:5px; background-color:#fff; width:100%; z-index:1000; position:absolute; bottom:-10px"></div>
+		<div class="container left-content homepage">
+
+			<div class="row">
+				<div class="col-xs-12">
+
+					<h1 class="article-title about">
+						ONLY AT NAU STORY
+					</h1>
+
+					<hr class="blue lg" />
+
+					<p>Mauris quis <a href=&quot;#&quot;>mollis sem. Sed vitae</a> magna est. Proin consectetur nec nunc vitae vestibulum. Vestibulum commodo orci eget diam sagittis, ut mattis nisi rhoncus. In pharetra leo nec cursus dignissim. Curabitur ut porttitor nulla. Cras tristique elementum magna eget vulputate. Cras laoreet, sem ut feugiat rhoncus, nisi justo convallis sem, in euismod est metus non turpis. Maecenas tincidunt magna malesuada augue facilisis sollicitudin. Quisque blandit nibh in elit convallis, sodales ornare orci sagittis. Donec at ante et sapien semper tincidunt. Proin mollis posuere ante vel euismod. Aliquam vitae aliquam nunc, dapibus ornare leo. Nulla vel sodales lacus, et facilisis purus.</p><blockquote>&quot;Mauris quis mollis sem. Sed vitae magna est. Proin consectetur nec nunc vitae vestibulum. Vestibulum commodo orci eget diam sagittis, ut mattis nisi rhoncus.&quot;</blockquote><p>liquam erat volutpat. Suspendisse id iaculis augue. Nulla dictum eros sit amet vehicula lacinia. Proin vitae odio nec risus lobortis vestibulum ac et lorem. Etiam auctor <a href=&quot;#&quot;>arcu in sem porta</a> varius. Sed tincidunt erat vel lacus eleifend, eget congue diam pulvinar. Sed vitae erat dapibus nisi lobortis tincidunt. Proin non mauris ante. Quisque consectetur at mi vel auctor. Integer mollis, mauris eget feugiat auctor, orci felis convallis mauris, sit amet volutpat mi sem sit amet nunc.</p>
+				</div>
 			</div>
-			
-			<div class="white-bar"></div>
 
-			<section class="stories-collapse collapse">
-				<div style="padding:5px; background-color:#fff; width:100%"></div>
-				<div class="four-column-content row">
+			<div class="row"><div class="col-xs-12">
+					<div class="img-container">
+						<img src="assets&#x2F;img&#x2F;article2.jpg" alt="Image 1 Alternate Text" />
+					</div>
+					<div class="img-container">
+						<img src="assets&#x2F;img&#x2F;article3.jpg" alt="Image 3 Alternate Text" />
+					</div>
+			</div></div>
 
+			<div style="padding:5px;"></div>
 
-
-				<div class="col-xs-6 col-sm-3">
-					<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
-					<h4 class="short-article-title">Lorem Ipsum something else</h4>
-					<p>
-						Sub content for each article that will be a small description, or excerpt, before the user clicks into the full article.
-					</p>
+			<div class="row"><div class="col-xs-12">
+				<div class="nau-video">
+					<iframe src="&#x2F;&#x2F;player.vimeo.com&#x2F;video&#x2F;11392027" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 				</div>
-
-				<div class="col-xs-6 col-sm-3">
-					<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
-					<h4 class="short-article-title">Lorem Ipsum something else</h4>
-					<p>
-						Sub content for each article that will be a small description, or excerpt, before the user clicks into the full article.
-					</p>
-				</div>
-
-				<div class="col-xs-6 col-sm-3">
-					<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
-					<h4 class="short-article-title">Lorem Ipsum something else</h4>
-					<p>
-						Sub content for each article that will be a small description, or excerpt, before the user clicks into the full article.
-					</p>
-				</div>
-
-				<div class="col-xs-6 col-sm-3">
-					<img src="http://placehold.it/780x500" alt="" class="img-responsive"/>
-					<h4 class="short-article-title">Lorem Ipsum something else</h4>
-					<p>
-						Sub content for each article that will be a small description, or excerpt, before the user clicks into the full article.
-					</p>
-				</div>
-
-			</div>
-			<div style="padding:5px; background-color:#fff; width:100%"></div>
-			</section>
+			</div></div>
 
 		</div>
 
 
+	</section>
+
+<footer>
+
+		<div class="opaque-section hidden-xs">&nbsp;</div>
+		
+
+		<div class="stories-btn hidden-xs">
+			<button type="button" class="footer-btn btn btn-default" data-toggle="collapse" data-target=".stories-collapse"><i class="icon-chevron-up"></i></button>
+
+		</div>
+
+				
+		<div class="mobile more-stories container visible-xs">
+			<h2>MORE STORIES</h2>
+		</div>
+
+		<section class="stories-collapse collapse">				
+
+			<div id="bottom-nav" class="bottom-nav hidden-xs">
+
+				<nav class="container">
+					<div class="row">
+					<div class="col-xs-12">
+
+						<ul class="category-nav nav navbar-nav navbar-left">
+
+							<li><a href="category.html">SHARE YOUR STORY <i class="icon-chevron-right" style="color:#6da3bf;"></i></a></li>
+							<li><a href="category.html">VOLUNTEER <i class="icon-chevron-right" style="color:#ef9616;"></i></a></li>
+
+						</ul>
+
+						<ul class="category-nav nav navbar-nav navbar-right">
+							<li><a href="about.html" style="padding-right:0px">ABOUT THE CAMPAIGN FOR NAU<i class="icon-chevron-right" style="color:#fff;"></i></a></li>
+						</ul>
+
+					</div>
+				</div>
+
+				</nav>
+
+			</div> 
+
+			<div class="stories-parent">
+
+				<div class="stories-container container">
+
+
+					<div id="stories-slider" class="carousel slide">
+
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+
+
+							<div class="item active">
+
+								<div class="row three-column">
+
+									<div class="col-xs-6 col-sm-4">
+										<a href="article.html">
+											<div class="img-container">
+												<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/article1.jpg" alt="" />
+											</div>
+										</a>
+										<h4 class="short-article-title"><a href="article.html">Regular Article</a></h4>
+									</div>
+
+									<div class="col-xs-6 col-sm-4">
+										<a href="article.html">
+											<div class="img-container">
+												<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/article2.jpg" alt="" />
+											</div>
+										</a>
+										<h4 class="short-article-title"><a href="article-video.html">Video Article</a></h4>
+									</div>
+
+									<div class="col-xs-6 col-sm-4">
+										<a href="article.html">
+											<div class="img-container">
+												<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/article3.jpg" alt="" />
+											</div>
+										</a>
+										<h4 class="short-article-title">Short Title</h4>
+									</div>
+
+									<div class="col-xs-6 col-sm-4">
+										<a href="article.html">
+											<div class="img-container">
+												<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/article4.jpg" alt="" />
+											</div>
+										</a>
+										<h4 class="short-article-title"><a href="article.html">Regular Article</a></h4>
+									</div>
+
+									<div class="col-xs-6 col-sm-4">
+										<a href="article.html">
+											<div class="img-container">
+												<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/article5.jpg" alt="" />
+											</div>
+										</a>
+										<h4 class="short-article-title"><a href="article-video.html">Video Article</a></h4>
+									</div>
+
+									<div class="col-xs-6 col-sm-4">
+										<a href="article.html">
+											<div class="img-container">
+												<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/article6.jpg" alt="" />
+											</div>
+										</a>
+										<h4 class="short-article-title">Short Title</h4>
+									</div>
+
+								</div>						
+
+							</div>
+
+
+
+							<div class="item">
+
+								<div class="row three-column">
+
+									<div class="col-xs-6 col-sm-4">
+										<a href="article.html">
+											<div class="img-container">
+												<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/article1.jpg" alt="" />
+											</div>
+										</a>
+										<h4 class="short-article-title"><a href="article.html">Regular Article</a></h4>
+									</div>
+
+									<div class="col-xs-6 col-sm-4">
+										<a href="article.html">
+											<div class="img-container">
+												<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/article2.jpg" alt="" />
+											</div>
+										</a>
+										<h4 class="short-article-title"><a href="article-video.html">Video Article</a></h4>
+									</div>
+
+									<div class="col-xs-6 col-sm-4">
+										<a href="article.html">
+											<div class="img-container">
+												<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/article3.jpg" alt="" />
+											</div>
+										</a>
+										<h4 class="short-article-title">Short Title</h4>
+									</div>
+
+									<div class="col-xs-6 col-sm-4">
+										<a href="article.html">
+											<div class="img-container">
+												<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/article4.jpg" alt="" />
+											</div>
+										</a>
+										<h4 class="short-article-title"><a href="article.html">Regular Article</a></h4>
+									</div>
+
+									<div class="col-xs-6 col-sm-4">
+										<a href="article.html">
+											<div class="img-container">
+												<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/article5.jpg" alt="" />
+											</div>
+										</a>
+										<h4 class="short-article-title"><a href="article-video.html">Video Article</a></h4>
+									</div>
+
+									<div class="col-xs-6 col-sm-4">
+										<a href="article.html">
+											<div class="img-container">
+												<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/article6.jpg" alt="" />
+											</div>
+										</a>
+										<h4 class="short-article-title">Short Title</h4>
+									</div>
+
+								</div>	
+
+
+							</div>
+
+
+						</div>
+
+						<!-- Controls -->
+						<a class="left carousel-control" href="#stories-slider" data-slide="prev">
+							<i class="icon-chevron-left"></i>
+						</a>
+						<a class="right carousel-control" href="#stories-slider" data-slide="next">
+							<i class="icon-chevron-right"></i>
+						</a>
+					</div>
+
+
+			</div>
+
+			</div>
+
+			<div style="padding:10px">&nbsp;</div>
+
+
+		</section>
+
+		<div class="bottom-links fade">
+
+			<div class="container">
+
+				<div class="row">
+
+					<div class="social col-xs-6">
+
+						<i class="icon-twitter"></i>
+						<i class="icon-facebook"></i>
+						<i class="icon-google-plus"></i>
+						<i class="icon-youtube-play"></i>
+
+					</div>
+
+					<div class="admin-links col-xs-6">
+						<a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
 	</footer>
+<div id="modal-bg-parent" class="fade hidden-xs">
+		<div id="modal-bg">
+			&nbsp;
+		</div>
+	</div>
+
+	<div id="featured-modal" class="fade hidden-xs">
+		<div class="modal-dialog">
+			<div class="modal-content">
+			<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h4 class="modal-title">Modal title</h4>
+			</div>
+			<div class="modal-body">
+				
+				<div class="tab-content">
+					<div id="camera-tab" class="tab-pane fade active">
+
+						<div id="carousel-example-generic" class="carousel slide">
+							<!-- Indicators -->
+							<ol class="carousel-indicators">
+								<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+							</ol>
+
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner">
+
+								<div class="item active" style="text-align:center;">
+									<img src="http://placehold.it/900x500" />
+								</div>
+
+								<div class="item" style="text-align:center;">
+									<img src="http://placehold.it/900x500" />
+								</div>
+
+								<div class="item" style="text-align:center;">
+									<img src="http://placehold.it/900x500" />
+								</div>
+								
+							</div>
+
+							<!-- Controls -->
+							<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+								<i class="icon-chevron-left"></i>
+							</a>
+							<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+								<i class="icon-chevron-right"></i>
+							</a>
+						</div>
+
+
+					</div>
+					<div id="article-tab" class="tab-pane fade">
+
+							<div id="about-bg-picture" class="border-blue" style="margin-bottom:25px;">
+								<img src="//cmsassets.nau.edu/campaign-website/live/assets/img/about_img.jpg" alt="" class="img-responsive"/>
+							</div>
+
+							<div class="row">
+								<div class="col-xs-12">
+
+									<h1 class="article-title about">
+										ONLY AT NAU STORY
+									</h1>
+
+									<hr class="blue lg" />
+
+									<p>Mauris quis <a href=&quot;#&quot;>mollis sem. Sed vitae</a> magna est. Proin consectetur nec nunc vitae vestibulum. Vestibulum commodo orci eget diam sagittis, ut mattis nisi rhoncus. In pharetra leo nec cursus dignissim. Curabitur ut porttitor nulla. Cras tristique elementum magna eget vulputate. Cras laoreet, sem ut feugiat rhoncus, nisi justo convallis sem, in euismod est metus non turpis. Maecenas tincidunt magna malesuada augue facilisis sollicitudin. Quisque blandit nibh in elit convallis, sodales ornare orci sagittis. Donec at ante et sapien semper tincidunt. Proin mollis posuere ante vel euismod. Aliquam vitae aliquam nunc, dapibus ornare leo. Nulla vel sodales lacus, et facilisis purus.</p><blockquote>&quot;Mauris quis mollis sem. Sed vitae magna est. Proin consectetur nec nunc vitae vestibulum. Vestibulum commodo orci eget diam sagittis, ut mattis nisi rhoncus.&quot;</blockquote><p>liquam erat volutpat. Suspendisse id iaculis augue. Nulla dictum eros sit amet vehicula lacinia. Proin vitae odio nec risus lobortis vestibulum ac et lorem. Etiam auctor <a href=&quot;#&quot;>arcu in sem porta</a> varius. Sed tincidunt erat vel lacus eleifend, eget congue diam pulvinar. Sed vitae erat dapibus nisi lobortis tincidunt. Proin non mauris ante. Quisque consectetur at mi vel auctor. Integer mollis, mauris eget feugiat auctor, orci felis convallis mauris, sit amet volutpat mi sem sit amet nunc.</p>
+								</div>
+							</div>
+
+					</div>
+					<div id="video-tab" class="tab-pane fade">
+						<div class="nau-video">
+							<iframe src="&#x2F;&#x2F;player.vimeo.com&#x2F;video&#x2F;11392027" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div>
+
+
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+
+			var circleObjs = [
+					{
+						type : 'camera'
+						, x : '25%'
+						, y : '10%'
+						, icon : 'icon-camera'
+					},
+					{
+						type : 'article'
+						, x : '10%'
+						, y : '35%'
+						, icon : 'icon-file-text'
+					}, 
+					{
+						type : 'video'
+						, x : '65%'
+						, y : '65%'
+						, icon : 'icon-facetime-video'
+					}
+				];
+
+			var animationInstance = new homePageAnimation(circleObjs);
+		});
+
+	</script>
+
 
 </body>
-	<script type="text/javascript" src="assets/js/jquery.js"></script>
-	<script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="assets/js/html5shiv.js"></script>
 
 </html>

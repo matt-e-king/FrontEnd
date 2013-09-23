@@ -6,7 +6,7 @@
 @import "variables.less";
 @import "mixins.less";
 
-@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+@import url(http://fonts.googleapis.com/css?family=Roboto:100);
 
 @nau-blue: #003466;
 @nau-dark-blue: #0c2842;
@@ -14,23 +14,37 @@
 @nau-light-blue: #6699cc;
 @nau-sage: #557665;
 @nau-light-sage: #619080;
+@nau-orange:#bba977;
 @nav-link-hover-bg: @nau-blue;
-@dark-grey: #595959;
+@light-grey: #767676;
+@dark-grey: #3e3e3e;
 @font-size-base: 16px;
 @label-primary-bg: @nau-blue;
 @badge-border-radius:0px;
+@white: #ffffff;
+@white-darker: darken(@white, 20%);
+@white-darkerer: darken(@white-darker, 30%);
 
-@font-face
-{
-font-family: Univers;
-src: url('../fonts/univers.ttf');
+
+
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=d25b1f2e-f94b-4ed4-a267-626ac4a38745");
+@font-face{
+font-family:"Univers LT W01 65 Bold";
+src:url("../../fonts/db1c462f-8890-4a11-9de5-36872279e20a.eot?#iefix");
+src:url("../../fonts/db1c462f-8890-4a11-9de5-36872279e20a.eot?#iefix") format("eot"),url("../../fonts/b993da84-c1f6-474a-8f00-8aa797b3de8f.woff") format("woff"),url("../../fonts/58403ef6-4c15-4280-b4b6-9acf50804f4f.ttf") format("truetype"),url("../../fonts/9178e351-95c5-4913-9eeb-fd0645a18c2d.svg#9178e351-95c5-4913-9eeb-fd0645a18c2d") format("svg");
+}
+@font-face{
+font-family:"UniversLTW01-67BoldCn";
+src:url("../../fonts/076b8d7a-91b5-4c89-86a1-546b980072c7.eot?#iefix");
+src:url("../../fonts/076b8d7a-91b5-4c89-86a1-546b980072c7.eot?#iefix") format("eot"),url("../../fonts/21decb60-b395-4de2-bd04-e38eb2a56d2f.woff") format("woff"),url("../../fonts/091058d4-36b2-43f6-80d3-16c88e098061.ttf") format("truetype"),url("../../fonts/827d22bc-e38b-4ccf-8a21-1f9aaa76e402.svg#827d22bc-e38b-4ccf-8a21-1f9aaa76e402") format("svg");
+}
+@font-face{
+font-family:"EgyptianSlateW01-Light";
+src:url("../../fonts/b86795e4-74a2-4c86-a865-96f08c38e2ca.eot?#iefix");
+src:url("../../fonts/b86795e4-74a2-4c86-a865-96f08c38e2ca.eot?#iefix") format("eot"),url("../../fonts/ef29444b-f0d7-4382-8a74-2ed0415d303f.woff") format("woff"),url("../../fonts/2bb31900-4092-41c7-b31d-0f294beab368.ttf") format("truetype"),url("../../fonts/6752065e-0ec1-4efc-9a8e-9feb4c7395a7.svg#6752065e-0ec1-4efc-9a8e-9feb4c7395a7") format("svg");
 }
 
-@font-face
-{
-font-family: Egyptian;
-src: url('../fonts/egyptian.otf');
-}
+
 
 .shadow(@horizontal: 0px; @vertical: 6px; @spread: -5px; @color: #999;) {
   -moz-box-shadow:    @horizontal @vertical 5px @spread @color;
@@ -39,20 +53,21 @@ src: url('../fonts/egyptian.otf');
 }
 
 .univers-font {
-  font-family: Univers;
+  font-family:'UniversLTW01-67BoldCn';
 }
 
 .egyptian-font {
-  font-family: Egyptian;
+  font-family: "EgyptianSlateW01-Light";
 }
 
 .roboto-font {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-style:normal;
+  font-weight:100;
 }
 
 .btn-colors(@btn-color: #555;) {
   background-color: @btn-color;
-  border:none;
 }
 
 .remove-rounded() {
@@ -69,9 +84,14 @@ src: url('../fonts/egyptian.otf');
   .remove-rounded();
   &:hover {
     .btn-colors(@nau-blue);
-    opacity:0.7;
   }
 }
+
+.btn-warning {
+  .remove-rounded();
+  border:1px solid transparent;
+}
+
 
 .breadcrumb {
   font-size:12px;
@@ -101,17 +121,30 @@ src: url('../fonts/egyptian.otf');
   }
 }
 
+//text shadow 
+
+.white-shadow {
+  text-shadow: 1px 1px 1px #fff;
+}
+
+.black-shadow {
+  text-shadow: 1px 1px 1px #000;
+}
+
+p {
+  .white-shadow;
+}
+
 // Links
 
 a {
-  color: @nau-light-sage;
+  color: @nau-blue;
   text-decoration: none;
 
   &:hover,
   &:focus {
-    color: @nau-light-sage;
+    color: @dark-grey;
     text-decoration: none;
-    opacity:0.7;
   }
 
   &:focus {
@@ -150,6 +183,97 @@ a {
   // Empty badges collapse automatically (not available in IE8)
   &:empty {
     display: none;
+  }
+}
+
+//Navs
+
+.nav {
+  > li {
+    > a {
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+//Carousel 
+
+.carousel-control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 5%;
+  .opacity(@carousel-control-opacity);
+  font-size: 3em;
+  color: @carousel-control-color;
+  text-align: center;
+  text-shadow: @carousel-text-shadow;
+  // We can't have this transition here because webkit cancels the carousel
+  // animation if you trip this while in the middle of another animation.
+
+  // Set gradients for backgrounds
+  &.left {
+    //#gradient > .horizontal(@start-color: rgba(0,0,0,.5); @end-color: rgba(0,0,0,.0001));
+    background-image:none;
+    left:-3%;
+  }
+  &.right {
+    left: auto;
+    right: -3%;
+    //#gradient > .horizontal(@start-color: rgba(0,0,0,.0001); @end-color: rgba(0,0,0,.5));
+    background-image:none;
+  }
+
+  // Hover/focus state
+  &:hover,
+  &:focus {
+    color: @carousel-control-color;
+    text-decoration: none;
+    .opacity(.9);
+  }
+
+  // Toggles
+  .icon-prev,
+  .icon-next,
+  .icon-chevron-left {
+    position: absolute;
+    top: 40%;
+    left: 0%;
+    z-index: 3000;
+    display: inline-block;
+  }
+
+  .icon-chevron-right {
+    right:0% !important;
+    position: absolute;
+    top: 40%;
+    z-index: 3000;
+    display: inline-block;
+  }
+
+  .icon-prev,
+  .icon-next {
+    width:  20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    font-family: serif;
+  }
+
+  .icon-prev {
+    &:before {
+      content: none;
+    }
+  }
+  .icon-next {
+    &:before {
+      content: none;
+    }
   }
 }
 
